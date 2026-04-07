@@ -1,86 +1,130 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artículos | Nadie te lo explica</title>
-  <meta
-    name="description"
-    content="Explora todos los artículos de Nadie te lo explica, ordenados por temas y con buscador."
-  />
-  <link rel="stylesheet" href="/ntle/style.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="/ntle/index.html" class="logo">nadie te lo explica</a>
+<section class="articles-page">
+  <div class="articles-shell">
+    <header class="articles-hero">
+      <p class="eyebrow">ARTÍCULOS</p>
+      <h1>Todos los artículos, ordenados por temas</h1>
+      <p class="hero-copy">
+        Busca por palabra clave o navega por tema. Cada artículo tiene su propia
+        página y algunos incluyen plantillas o archivos descargables.
+      </p>
+    </header>
 
-      <nav class="nav">
-        <a href="/ntle/index.html">Inicio</a>
-        <a href="/ntle/temas.html">Temas</a>
-        <a href="/ntle/articulos.html" class="active">Artículos</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="articles-hero">
-      <div class="container">
-        <p class="section-kicker">ARTÍCULOS</p>
-        <h1 class="articles-title">Todos los artículos, ordenados por temas</h1>
-        <p class="articles-subtitle">
-          Busca por palabra clave o navega por tema. Cada artículo tiene su propia página
-          y algunos incluyen plantillas o archivos descargables.
-        </p>
-      </div>
-    </section>
-
-    <section class="articulos-section">
-      <div class="container">
-        <div class="articulos-toolbar">
-          <div class="search-box">
-            <label for="articleSearch" class="sr-only">Buscar artículos</label>
-            <input
-              type="search"
-              id="articleSearch"
-              placeholder="Buscar: nómina, presupuesto, alquiler, renta..."
-              autocomplete="off"
+    <section class="articles-tools" aria-label="Buscador y filtros">
+      <div class="search-box">
+        <label for="article-search" class="search-label">Buscar artículos</label>
+        <div class="search-input-wrap">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+            <path
+              d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13Zm0 1.8a4.7 4.7 0 1 0 0 9.4a4.7 4.7 0 0 0 0-9.4Zm6.95 10.38 3.55 3.55-1.27 1.27-3.55-3.55 1.27-1.27Z"
+              fill="currentColor"
             />
-          </div>
-
-          <div class="filters">
-            <button class="filter-btn active" data-filter="todos">Todos</button>
-            <button class="filter-btn" data-filter="finanzas-personales">Finanzas personales</button>
-            <button class="filter-btn" data-filter="trabajo-y-salario">Trabajo y salario</button>
-          </div>
+          </svg>
+          <input
+            id="article-search"
+            type="search"
+            placeholder="Ej. nómina, ahorro, sueldo neto..."
+          />
         </div>
+      </div>
 
-        <p id="resultsCount" class="results-count">Mostrando todos los artículos</p>
+      <nav class="topic-filters" aria-label="Filtrar por tema">
+        <button class="filter-pill is-active" type="button">Todos</button>
+        <button class="filter-pill" type="button">Finanzas personales</button>
+        <button class="filter-pill" type="button">Trabajo y salario</button>
+      </nav>
 
-        <div id="noResults" class="no-results hidden">
-          <h2>No hemos encontrado artículos</h2>
-          <p>Prueba con otra búsqueda o navega por uno de los temas.</p>
-        </div>
+      <p class="results-text">Mostrando todos los artículos</p>
+    </section>
 
-        <section class="tema-group" data-group="finanzas-personales">
-          <div class="tema-heading">
-            <h2>Finanzas personales</h2>
-            <p>Ahorro, control del dinero y organización mensual.</p>
-          </div>
-          <div class="articles-grid" id="grupo-finanzas-personales"></div>
-        </section>
+    <section class="empty-state" hidden>
+      <h2>No hemos encontrado artículos</h2>
+      <p>Prueba con otra búsqueda o navega por uno de los temas.</p>
+    </section>
 
-        <section class="tema-group" data-group="trabajo-y-salario">
-          <div class="tema-heading">
-            <h2>Trabajo y salario</h2>
-            <p>Nóminas, sueldo neto, bruto y conceptos laborales básicos.</p>
-          </div>
-          <div class="articles-grid" id="grupo-trabajo-y-salario"></div>
-        </section>
+    <section class="topic-group">
+      <div class="section-heading">
+        <p class="section-kicker">TEMA</p>
+        <h2>Finanzas personales</h2>
+        <p>Ahorro, control del dinero y organización mensual.</p>
+      </div>
+
+      <div class="article-grid">
+        <article class="article-card">
+          <span class="article-tag">Finanzas personales</span>
+          <h3>
+            <a href="#">Cómo hacer un presupuesto mensual sin agobiarte</a>
+          </h3>
+          <p>
+            Una guía sencilla para ordenar ingresos, gastos fijos y ahorro sin
+            usar tecnicismos ni plantillas complicadas.
+          </p>
+        </article>
+
+        <article class="article-card">
+          <span class="article-tag">Finanzas personales</span>
+          <h3>
+            <a href="#">Método básico para empezar a ahorrar cada mes</a>
+          </h3>
+          <p>
+            Qué porcentaje guardar, dónde ponerlo y cómo mantener el hábito sin
+            sentir que te estás castigando.
+          </p>
+        </article>
+
+        <article class="article-card">
+          <span class="article-tag">Finanzas personales</span>
+          <h3>
+            <a href="#">Errores típicos al organizar tus gastos</a>
+          </h3>
+          <p>
+            Los fallos más comunes cuando empiezas a controlar tu dinero y cómo
+            corregirlos rápido.
+          </p>
+        </article>
       </div>
     </section>
-  </main>
 
-  <script src="/ntle/articulos.js"></script>
-</body>
-</html>
+    <section class="topic-group">
+      <div class="section-heading">
+        <p class="section-kicker">TEMA</p>
+        <h2>Trabajo y salario</h2>
+        <p>Nóminas, sueldo neto, bruto y conceptos laborales básicos.</p>
+      </div>
+
+      <div class="article-grid">
+        <article class="article-card">
+          <span class="article-tag">Trabajo y salario</span>
+          <h3>
+            <a href="#">Cómo entender tu nómina sin perderte</a>
+          </h3>
+          <p>
+            Explicación clara de devengos, deducciones, IRPF y cotizaciones para
+            saber qué estás cobrando de verdad.
+          </p>
+        </article>
+
+        <article class="article-card">
+          <span class="article-tag">Trabajo y salario</span>
+          <h3>
+            <a href="#">Diferencia entre sueldo bruto y neto</a>
+          </h3>
+          <p>
+            Qué significa cada cifra y por qué el dinero que llega a tu cuenta
+            nunca coincide con el salario bruto.
+          </p>
+        </article>
+
+        <article class="article-card">
+          <span class="article-tag">Trabajo y salario</span>
+          <h3>
+            <a href="#">Qué revisar antes de firmar un contrato</a>
+          </h3>
+          <p>
+            Jornada, salario, duración y puntos clave para detectar dudas antes
+            de aceptar una oferta.
+          </p>
+        </article>
+      </div>
+    </section>
+  </div>
+</section>
