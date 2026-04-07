@@ -6,29 +6,29 @@
   <title>Artículos | Nadie te lo explica</title>
   <meta
     name="description"
-    content="Encuentra todos los artículos de Nadie te lo explica, organizados por temas y con buscador."
+    content="Explora todos los artículos de Nadie te lo explica, ordenados por temas y con buscador."
   />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/ntle/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">nadie te lo explica</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="/ntle/index.html" class="logo">nadie te lo explica</a>
 
-      <nav class="main-nav">
-        <a href="index.html">Inicio</a>
-        <a href="temas.html">Temas</a>
-        <a href="articulos.html" class="active">Artículos</a>
+      <nav class="nav">
+        <a href="/ntle/index.html">Inicio</a>
+        <a href="/ntle/temas.html">Temas</a>
+        <a href="/ntle/articulos.html" class="active">Artículos</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="articles-hero">
       <div class="container">
-        <p class="eyebrow">ARTÍCULOS</p>
-        <h1>Todos los artículos, ordenados por temas</h1>
-        <p class="hero-text">
+        <p class="section-kicker">ARTÍCULOS</p>
+        <h1 class="articles-title">Todos los artículos, ordenados por temas</h1>
+        <p class="articles-subtitle">
           Busca por palabra clave o navega por tema. Cada artículo tiene su propia página
           y algunos incluyen plantillas o archivos descargables.
         </p>
@@ -44,6 +44,7 @@
               type="search"
               id="articleSearch"
               placeholder="Buscar: nómina, presupuesto, alquiler, renta..."
+              autocomplete="off"
             />
           </div>
 
@@ -57,8 +58,8 @@
         <p id="resultsCount" class="results-count">Mostrando todos los artículos</p>
 
         <div id="noResults" class="no-results hidden">
-          <h2>No hay resultados</h2>
-          <p>Prueba con otra palabra o entra en uno de los temas.</p>
+          <h2>No hemos encontrado artículos</h2>
+          <p>Prueba con otra búsqueda o navega por uno de los temas.</p>
         </div>
 
         <section class="tema-group" data-group="finanzas-personales">
@@ -80,6 +81,6 @@
     </section>
   </main>
 
-  <script src="articulos.js"></script>
+  <script src="/ntle/articulos.js"></script>
 </body>
 </html>
