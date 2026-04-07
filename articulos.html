@@ -23,7 +23,7 @@
     <section class="hero">
       <p class="eyebrow">ARTÍCULOS</p>
       <h1>Todos los artículos, ordenados por temas</h1>
-      <p>
+      <p class="hero-copy">
         Busca por palabra clave o navega por tema. Cada artículo tiene su propia
         página y algunos incluyen plantillas o archivos descargables.
       </p>
@@ -36,6 +36,7 @@
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13Zm0 1.8a4.7 4.7 0 1 0 0 9.4a4.7 4.7 0 0 0 0-9.4Zm6.95 10.38 3.55 3.55-1.27 1.27-3.55-3.55 1.27-1.27Z" fill="currentColor"/>
         </svg>
+
         <input
           id="searchInput"
           class="search-input"
@@ -45,9 +46,15 @@
       </div>
 
       <div class="filters">
-        <button class="filter-btn active" data-filter="todos" type="button">Todos</button>
-        <button class="filter-btn" data-filter="finanzas personales" type="button">Finanzas personales</button>
-        <button class="filter-btn" data-filter="trabajo y salario" type="button">Trabajo y salario</button>
+        <button class="filter-btn active" data-filter="todos" type="button">
+          Todos
+        </button>
+        <button class="filter-btn" data-filter="finanzas personales" type="button">
+          Finanzas personales
+        </button>
+        <button class="filter-btn" data-filter="trabajo y salario" type="button">
+          Trabajo y salario
+        </button>
       </div>
 
       <p class="results-text" id="resultsText">Mostrando todos los artículos</p>
@@ -66,22 +73,46 @@
       </div>
 
       <div class="article-grid">
-        <article class="article-card" data-category="finanzas personales" data-title="Cómo hacer un presupuesto mensual sin agobiarte" data-search="presupuesto mensual ahorro gastos finanzas personales">
+        <article
+          class="article-card"
+          data-category="finanzas personales"
+          data-title="Cómo hacer un presupuesto mensual sin agobiarte"
+          data-search="presupuesto mensual ahorro gastos finanzas personales"
+        >
           <span class="article-tag">Finanzas personales</span>
           <h3><a href="#">Cómo hacer un presupuesto mensual sin agobiarte</a></h3>
-          <p>Una guía sencilla para ordenar ingresos, gastos fijos y ahorro sin usar tecnicismos ni plantillas complicadas.</p>
+          <p>
+            Una guía sencilla para ordenar ingresos, gastos fijos y ahorro sin
+            usar tecnicismos ni plantillas complicadas.
+          </p>
         </article>
 
-        <article class="article-card" data-category="finanzas personales" data-title="Método básico para empezar a ahorrar cada mes" data-search="ahorrar dinero mes finanzas personales ahorro">
+        <article
+          class="article-card"
+          data-category="finanzas personales"
+          data-title="Método básico para empezar a ahorrar cada mes"
+          data-search="ahorrar dinero mes finanzas personales ahorro"
+        >
           <span class="article-tag">Finanzas personales</span>
           <h3><a href="#">Método básico para empezar a ahorrar cada mes</a></h3>
-          <p>Qué porcentaje guardar, dónde ponerlo y cómo mantener el hábito sin sentir que te estás castigando.</p>
+          <p>
+            Qué porcentaje guardar, dónde ponerlo y cómo mantener el hábito sin
+            sentir que te estás castigando.
+          </p>
         </article>
 
-        <article class="article-card" data-category="finanzas personales" data-title="Errores típicos al organizar tus gastos" data-search="gastos errores organizar dinero finanzas personales">
+        <article
+          class="article-card"
+          data-category="finanzas personales"
+          data-title="Errores típicos al organizar tus gastos"
+          data-search="gastos errores organizar dinero finanzas personales"
+        >
           <span class="article-tag">Finanzas personales</span>
           <h3><a href="#">Errores típicos al organizar tus gastos</a></h3>
-          <p>Los fallos más comunes cuando empiezas a controlar tu dinero y cómo corregirlos rápido.</p>
+          <p>
+            Los fallos más comunes cuando empiezas a controlar tu dinero y cómo
+            corregirlos rápido.
+          </p>
         </article>
       </div>
     </section>
@@ -94,93 +125,51 @@
       </div>
 
       <div class="article-grid">
-        <article class="article-card" data-category="trabajo y salario" data-title="Cómo entender tu nómina sin perderte" data-search="nomina nómina salario deducciones irpf trabajo">
+        <article
+          class="article-card"
+          data-category="trabajo y salario"
+          data-title="Cómo entender tu nómina sin perderte"
+          data-search="nomina nómina salario deducciones irpf trabajo"
+        >
           <span class="article-tag">Trabajo y salario</span>
           <h3><a href="#">Cómo entender tu nómina sin perderte</a></h3>
-          <p>Explicación clara de devengos, deducciones, IRPF y cotizaciones para saber qué estás cobrando de verdad.</p>
+          <p>
+            Explicación clara de devengos, deducciones, IRPF y cotizaciones para
+            saber qué estás cobrando de verdad.
+          </p>
         </article>
 
-        <article class="article-card" data-category="trabajo y salario" data-title="Diferencia entre sueldo bruto y neto" data-search="sueldo bruto neto salario trabajo">
+        <article
+          class="article-card"
+          data-category="trabajo y salario"
+          data-title="Diferencia entre sueldo bruto y neto"
+          data-search="sueldo bruto neto salario trabajo"
+        >
           <span class="article-tag">Trabajo y salario</span>
           <h3><a href="#">Diferencia entre sueldo bruto y neto</a></h3>
-          <p>Qué significa cada cifra y por qué el dinero que llega a tu cuenta nunca coincide con el salario bruto.</p>
+          <p>
+            Qué significa cada cifra y por qué el dinero que llega a tu cuenta
+            nunca coincide con el salario bruto.
+          </p>
         </article>
 
-        <article class="article-card" data-category="trabajo y salario" data-title="Qué revisar antes de firmar un contrato" data-search="contrato trabajo salario jornada revisar antes firmar">
+        <article
+          class="article-card"
+          data-category="trabajo y salario"
+          data-title="Qué revisar antes de firmar un contrato"
+          data-search="contrato trabajo salario jornada revisar antes firmar"
+        >
           <span class="article-tag">Trabajo y salario</span>
           <h3><a href="#">Qué revisar antes de firmar un contrato</a></h3>
-          <p>Jornada, salario, duración y puntos clave para detectar dudas antes de aceptar una oferta.</p>
+          <p>
+            Jornada, salario, duración y puntos clave para detectar dudas antes
+            de aceptar una oferta.
+          </p>
         </article>
       </div>
     </section>
   </main>
 
-  <script>
-    const searchInput = document.getElementById("searchInput");
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const cards = document.querySelectorAll(".article-card");
-    const groups = document.querySelectorAll(".topic-group");
-    const emptyState = document.getElementById("emptyState");
-    const resultsText = document.getElementById("resultsText");
-
-    let currentFilter = "todos";
-
-    function normalize(text) {
-      return text
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-    }
-
-    function updateFilters() {
-      const query = normalize(searchInput.value.trim());
-      let visibleCount = 0;
-
-      cards.forEach((card) => {
-        const category = normalize(card.dataset.category || "");
-        const title = normalize(card.dataset.title || "");
-        const search = normalize(card.dataset.search || "");
-        const matchesFilter =
-          currentFilter === "todos" || category === normalize(currentFilter);
-        const matchesSearch =
-          query === "" || title.includes(query) || search.includes(query);
-
-        const visible = matchesFilter && matchesSearch;
-        card.classList.toggle("hidden", !visible);
-
-        if (visible) visibleCount++;
-      });
-
-      groups.forEach((group) => {
-        const visibleCards = group.querySelectorAll(".article-card:not(.hidden)");
-        group.classList.toggle("hidden", visibleCards.length === 0);
-      });
-
-      emptyState.classList.toggle("show", visibleCount === 0);
-
-      if (query && currentFilter !== "todos") {
-        resultsText.textContent = `Mostrando ${visibleCount} artículo(s) para “${searchInput.value}” en ${currentFilter}`;
-      } else if (query) {
-        resultsText.textContent = `Mostrando ${visibleCount} artículo(s) para “${searchInput.value}”`;
-      } else if (currentFilter !== "todos") {
-        resultsText.textContent = `Mostrando ${visibleCount} artículo(s) en ${currentFilter}`;
-      } else {
-        resultsText.textContent = "Mostrando todos los artículos";
-      }
-    }
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
-        currentFilter = button.dataset.filter;
-        updateFilters();
-      });
-    });
-
-    searchInput.addEventListener("input", updateFilters);
-
-    updateFilters();
-  </script>
+  <script src="articulos.js"></script>
 </body>
 </html>
