@@ -551,7 +551,7 @@ img {
 }
 
 .search-box {
-  width: 280px;
+  width: 260px;
   flex-shrink: 0;
 }
 
@@ -606,7 +606,7 @@ img {
   color: var(--muted);
   font-size: 0.98rem;
   font-weight: 800;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 .filters {
@@ -637,6 +637,7 @@ img {
   color: var(--white);
   border-color: transparent;
 }
+
 
 /* =========================
    GRUPOS DE ARTÍCULOS
