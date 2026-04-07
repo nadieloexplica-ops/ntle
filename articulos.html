@@ -32,49 +32,49 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-hero-shell">
-          <p class="eyebrow">ARTÍCULOS</p>
-          <h1 class="page-title">Todos los artículos, ordenados por temas.</h1>
-          <p class="page-text">
-            Busca por palabra clave o navega por tema. Cada artículo tiene su propia
-            página y algunos incluyen plantillas o archivos descargables para que
-            puedas aplicarlo enseguida.
-          </p>
-        </div>
-      </div>
-    </section>
-
-   <section class="articles-toolbar" aria-label="Buscador y filtros">
+    <section class="articles-header" aria-label="Cabecera de artículos y buscador">
   <div class="container">
-    <div class="toolbar-shell">
-      <div class="toolbar-top">
-        <div class="search-box">
-          <label class="search-label" for="articleSearch">Buscar artículos</label>
-
-          <div class="search-wrap">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13Zm0 1.8a4.7 4.7 0 1 0 0 9.4a4.7 4.7 0 0 0 0-9.4Zm6.95 10.38 3.55 3.55-1.27 1.27-3.55-3.55 1.27-1.27Z" fill="currentColor"/>
-            </svg>
-
-            <input
-              id="articleSearch"
-              class="search-input"
-              type="search"
-              placeholder="Ej. nómina, ahorro..."
-            />
-          </div>
-        </div>
-
-        <p class="results-text" id="resultsCount">0 artículos encontrados</p>
+    <div class="articles-header-grid">
+      <div class="articles-intro-card">
+        <p class="eyebrow">ARTÍCULOS</p>
+        <h1 class="page-title">Todos los artículos, ordenados por temas.</h1>
+        <p class="page-text">
+          Busca por palabra clave o navega por tema. Cada artículo tiene su propia
+          página y algunos incluyen plantillas o archivos descargables para que
+          puedas aplicarlo enseguida.
+        </p>
       </div>
 
+      <aside class="articles-search-card">
+        <label class="search-label" for="articleSearch">Buscar artículos</label>
+
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13Zm0 1.8a4.7 4.7 0 1 0 0 9.4a4.7 4.7 0 0 0 0-9.4Zm6.95 10.38 3.55 3.55-1.27 1.27-3.55-3.55 1.27-1.27Z" fill="currentColor"/>
+          </svg>
+
+          <input
+            id="articleSearch"
+            class="search-input"
+            type="search"
+            placeholder="Ej. nómina, ahorro..."
+          />
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="articles-toolbar" aria-label="Filtros y resultados">
+  <div class="container">
+    <div class="toolbar-shell toolbar-shell-bottom">
       <div class="filters">
         <button class="filter-btn active" data-filter="todos" type="button">Todos</button>
         <button class="filter-btn" data-filter="finanzas-personales" type="button">Finanzas personales</button>
         <button class="filter-btn" data-filter="trabajo-y-salario" type="button">Trabajo y salario</button>
       </div>
+
+      <p class="results-text" id="resultsCount">0 artículos encontrados</p>
     </div>
   </div>
 </section>
