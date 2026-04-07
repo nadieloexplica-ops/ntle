@@ -6,7 +6,7 @@
   <title>Artículos | Nadie te lo explica</title>
   <meta
     name="description"
-    content="Explora todos los artículos de Nadie te lo explica: finanzas personales, inversiones, vivienda, trabajo, impuestos y burocracia explicados claro."
+    content="Encuentra todos los artículos de Nadie te lo explica, organizados por temas y con buscador."
   />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,27 +15,27 @@
     <div class="container header-inner">
       <a href="index.html" class="logo">nadie te lo explica</a>
 
-      <nav class="main-nav" aria-label="Navegación principal">
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
         <a href="temas.html">Temas</a>
         <a href="articulos.html" class="active">Artículos</a>
-        <a href="index.html#contacto">Contáctanos</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="page-hero page-hero-articulos">
+    <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">BIBLIOTECA DE CONTENIDO</p>
-        <h1>Todos los artículos, ordenados para que encuentres justo lo que necesitas</h1>
+        <p class="eyebrow">ARTÍCULOS</p>
+        <h1>Todos los artículos, ordenados por temas</h1>
         <p class="hero-text">
-          Busca por palabra clave o navega por tema. Cada semana podrás añadir nuevos artículos
-          y aparecerán automáticamente en este listado.
+          Busca por palabra clave o navega por tema. Cada artículo tiene su propia página
+          y algunos incluyen plantillas o archivos descargables.
         </p>
       </div>
     </section>
 
-    <section class="articulos-layout">
+    <section class="articulos-section">
       <div class="container">
         <div class="articulos-toolbar">
           <div class="search-box">
@@ -43,83 +43,42 @@
             <input
               type="search"
               id="articleSearch"
-              placeholder="Buscar: nómina, alquiler, renta, ahorro..."
-              autocomplete="off"
+              placeholder="Buscar: nómina, presupuesto, alquiler, renta..."
             />
           </div>
 
           <div class="filters">
             <button class="filter-btn active" data-filter="todos">Todos</button>
             <button class="filter-btn" data-filter="finanzas-personales">Finanzas personales</button>
-            <button class="filter-btn" data-filter="inversiones">Inversiones</button>
-            <button class="filter-btn" data-filter="vivienda-y-hogar">Vivienda y hogar</button>
             <button class="filter-btn" data-filter="trabajo-y-salario">Trabajo y salario</button>
-            <button class="filter-btn" data-filter="impuestos-y-burocracia">Impuestos y burocracia</button>
           </div>
         </div>
 
-        <div class="results-bar">
-          <p id="resultsCount">Mostrando todos los artículos</p>
-        </div>
+        <p id="resultsCount" class="results-count">Mostrando todos los artículos</p>
 
         <div id="noResults" class="no-results hidden">
-          <h2>No hemos encontrado artículos con esa búsqueda</h2>
-          <p>Prueba con otra palabra o entra en uno de los temas principales.</p>
+          <h2>No hay resultados</h2>
+          <p>Prueba con otra palabra o entra en uno de los temas.</p>
         </div>
 
         <section class="tema-group" data-group="finanzas-personales">
           <div class="tema-heading">
             <h2>Finanzas personales</h2>
-            <p>Presupuesto, ahorro, control del dinero y organización básica.</p>
+            <p>Ahorro, control del dinero y organización mensual.</p>
           </div>
           <div class="articles-grid" id="grupo-finanzas-personales"></div>
-        </section>
-
-        <section class="tema-group" data-group="inversiones">
-          <div class="tema-heading">
-            <h2>Inversiones</h2>
-            <p>Primeros pasos para invertir con criterio y sin humo.</p>
-          </div>
-          <div class="articles-grid" id="grupo-inversiones"></div>
-        </section>
-
-        <section class="tema-group" data-group="vivienda-y-hogar">
-          <div class="tema-heading">
-            <h2>Vivienda y hogar</h2>
-            <p>Alquiler, facturas, contratos y vivir por tu cuenta.</p>
-          </div>
-          <div class="articles-grid" id="grupo-vivienda-y-hogar"></div>
         </section>
 
         <section class="tema-group" data-group="trabajo-y-salario">
           <div class="tema-heading">
             <h2>Trabajo y salario</h2>
-            <p>Nóminas, contratos, sueldo neto y vida laboral real.</p>
+            <p>Nóminas, sueldo neto, bruto y conceptos laborales básicos.</p>
           </div>
           <div class="articles-grid" id="grupo-trabajo-y-salario"></div>
-        </section>
-
-        <section class="tema-group" data-group="impuestos-y-burocracia">
-          <div class="tema-heading">
-            <h2>Impuestos y burocracia</h2>
-            <p>Renta, Hacienda, empadronamiento y trámites explicados claro.</p>
-          </div>
-          <div class="articles-grid" id="grupo-impuestos-y-burocracia"></div>
         </section>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Nadie te lo explica</p>
-      <div class="footer-links">
-        <a href="index.html">Inicio</a>
-        <a href="temas.html">Temas</a>
-        <a href="articulos.html">Artículos</a>
-      </div>
-    </div>
-  </footer>
 
   <script src="articulos.js"></script>
 </body>
