@@ -495,17 +495,9 @@ img {
    PAGE HERO (ARTÍCULOS / TEMAS)
 ========================= */
 
-.page-hero {
-  padding: 34px 0 14px;
-}
 
-.page-hero-shell {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
-  padding: 42px 42px 38px;
-}
+
+
 
 .page-title {
   font-size: clamp(2.8rem, 6vw, 4.8rem);
@@ -521,6 +513,199 @@ img {
   color: var(--muted);
   font-size: 1.06rem;
   line-height: 1.7;
+}
+
+/* =========================
+   CABECERA ARTÍCULOS NUEVA
+========================= */
+
+.articles-header {
+  padding: 34px 0 18px;
+}
+
+.articles-header-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) 360px;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.articles-intro-card,
+.articles-search-card,
+.toolbar-shell-bottom {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+
+.articles-intro-card {
+  padding: 42px;
+}
+
+.articles-search-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.articles-search-card .search-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+  font-weight: 900;
+  max-width: 7ch;
+  margin-bottom: 22px;
+}
+
+.page-text {
+  max-width: 48ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.articles-search-card .search-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.articles-search-card .search-wrap svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #827c79;
+  pointer-events: none;
+}
+
+.articles-search-card .search-input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  border-radius: 18px;
+  padding: 0 16px 0 44px;
+  font-size: 0.96rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.articles-search-card .search-input::placeholder {
+  color: #8f8885;
+}
+
+.articles-search-card .search-input:focus {
+  border-color: rgba(239, 75, 90, 0.45);
+  box-shadow: 0 0 0 4px rgba(239, 75, 90, 0.08);
+}
+
+/* =========================
+   TOOLBAR DEBAJO
+========================= */
+
+.articles-toolbar {
+  padding: 0 0 24px;
+}
+
+.toolbar-shell-bottom {
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--red-soft), var(--red-dark));
+  color: var(--white);
+  border-color: transparent;
+}
+
+.results-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 980px) {
+  .articles-header-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .articles-intro-card {
+    padding: 28px;
+  }
+
+  .articles-search-card {
+    padding: 24px;
+  }
+
+  .toolbar-shell-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .results-text {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 680px) {
+  .page-title {
+    font-size: 3.2rem;
+    max-width: none;
+  }
+
+  .filters {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
 }
 
 /* =========================
@@ -542,18 +727,7 @@ img {
   padding: 24px;
 }
 
-.toolbar-top {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 18px;
-}
 
-.search-box {
-  width: 260px;
-  flex-shrink: 0;
-}
 
 .search-label {
   display: block;
