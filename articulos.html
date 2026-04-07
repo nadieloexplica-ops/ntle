@@ -47,8 +47,10 @@
     </section>
 
     <section class="articles-toolbar" aria-label="Buscador y filtros">
-      <div class="container">
-        <div class="toolbar-shell">
+  <div class="container">
+    <div class="toolbar-shell">
+      <div class="toolbar-top">
+        <div class="search-box">
           <label class="search-label" for="articleSearch">Buscar artículos</label>
 
           <div class="search-wrap">
@@ -60,20 +62,22 @@
               id="articleSearch"
               class="search-input"
               type="search"
-              placeholder="Ej. nómina, ahorro, sueldo neto..."
+              placeholder="Ej. nómina, ahorro..."
             />
           </div>
-
-          <div class="filters">
-            <button class="filter-btn active" data-filter="todos" type="button">Todos</button>
-            <button class="filter-btn" data-filter="finanzas-personales" type="button">Finanzas personales</button>
-            <button class="filter-btn" data-filter="trabajo-y-salario" type="button">Trabajo y salario</button>
-          </div>
-
-          <p class="results-text" id="resultsCount">0 artículos encontrados</p>
         </div>
+
+        <p class="results-text" id="resultsCount">0 artículos encontrados</p>
       </div>
-    </section>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="todos" type="button">Todos</button>
+        <button class="filter-btn" data-filter="finanzas-personales" type="button">Finanzas personales</button>
+        <button class="filter-btn" data-filter="trabajo-y-salario" type="button">Trabajo y salario</button>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="container">
       <div class="no-results hidden" id="noResults">
