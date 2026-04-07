@@ -8,16 +8,25 @@
     name="description"
     content="Aprende a hacer un presupuesto mensual paso a paso, sin complicaciones y con ejemplos reales adaptados a España."
   />
-  <link rel="stylesheet" href="/ntle/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="../index.html" class="logo">nadie te lo explica</a>
-      <nav class="main-nav">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="../index.html" class="logo">
+        nadie te lo <span class="mark">explica</span>
+      </a>
+
+      <nav class="nav">
         <a href="../index.html">Inicio</a>
-        <a href="../temas.html">Temas</a>
+        <a href="../index.html#temas-destacados">Temas</a>
         <a href="../articulos.html" class="active">Artículos</a>
+        <a href="../index.html#contacto" class="btn btn-primary nav-btn">Contáctanos</a>
       </nav>
     </div>
   </header>
@@ -29,7 +38,9 @@
           <div class="article-breadcrumbs">
             <a href="../articulos.html">Artículos</a> / Finanzas personales
           </div>
+
           <h1 class="article-title">Cómo hacer un presupuesto mensual (paso a paso y sin complicaciones)</h1>
+
           <p class="article-intro">
             Si llegas a fin de mes sin saber en qué se ha ido el dinero, esta guía te ayudará
             a ordenar tus ingresos, gastos y ahorro de forma realista.
