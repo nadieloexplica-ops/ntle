@@ -527,6 +527,7 @@ img {
    TOOLBAR ARTÍCULOS
 ========================= */
 
+
 .articles-toolbar {
   padding: 28px 0 24px;
 }
@@ -551,8 +552,8 @@ img {
 
 .search-wrap {
   position: relative;
-  width: 100%;
-  max-width: 360px;
+  width: 360px;
+  max-width: 100%;
   margin-bottom: 18px;
 }
 
@@ -568,6 +569,7 @@ img {
 }
 
 .search-input {
+  display: block;
   width: 100%;
   min-height: 48px;
   border: 1px solid var(--border);
@@ -587,6 +589,42 @@ img {
 .search-input:focus {
   border-color: rgba(239, 75, 90, 0.45);
   box-shadow: 0 0 0 4px rgba(239, 75, 90, 0.08);
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.filter-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--red-soft), var(--red-dark));
+  color: var(--white);
+  border-color: transparent;
+}
+
+.results-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 /* =========================
