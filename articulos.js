@@ -6,7 +6,7 @@ const articulos = [
     temaLabel: "Trabajo y salario",
     url: "articulos/como-leer-una-nomina-espana.html",
     fecha: "2026-04-07",
-    keywords: ["nomina", "irpf", "salario bruto", "salario neto", "trabajo", "sueldo"],
+    keywords: ["nomina", "nómina", "irpf", "salario bruto", "salario neto", "trabajo", "sueldo"],
     descargable: true,
     descargaTexto: "Descargar ejemplo de nómina",
     descargaUrl: "descargas/ejemplo-nomina.pdf"
@@ -90,10 +90,16 @@ function filtrarArticulos() {
     .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 }
 
-function renderArticulos() {
+function limpiarGrupos() {
   Object.values(grupos).forEach((grupo) => {
-    grupo.innerHTML = "";
+    if (grupo) {
+      grupo.innerHTML = "";
+    }
   });
+}
+
+function renderArticulos() {
+  limpiarGrupos();
 
   const filtrados = filtrarArticulos();
 
@@ -114,7 +120,9 @@ function renderArticulos() {
       : `${filtrados.length} artículos encontrados`;
 
   filtrados.forEach((articulo) => {
-    grupos[articulo.tema].innerHTML += crearCard(articulo);
+    if (grupos[articulo.tema]) {
+      grupos[articulo.tema].innerHTML += crearCard(articulo);
+    }
   });
 
   temaGroups.forEach((group) => {
@@ -125,10 +133,12 @@ function renderArticulos() {
   });
 }
 
-searchInput.addEventListener("input", (e) => {
-  textoBusqueda = e.target.value.trim();
-  renderArticulos();
-});
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    textoBusqueda = e.target.value.trim();
+    renderArticulos();
+  });
+}
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
