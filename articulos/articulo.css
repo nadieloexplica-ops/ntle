@@ -49,36 +49,42 @@ img {
   display: block;
 }
 
+.container {
+  width: min(calc(100% - 48px), var(--max));
+  margin: 0 auto;
+}
+
 /* =========================
-   HEADER
+   HEADER / NAV
 ========================= */
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 30;
+.topbar {
   background: rgba(243, 242, 238, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 40;
 }
 
-.site-header__inner {
-  width: min(calc(100% - 48px), var(--max));
-  margin: 0 auto;
+.topbar-inner {
   min-height: 86px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  flex-wrap: wrap;
 }
 
-.brand {
-  font-size: 1.85rem;
+.logo {
+  font-size: 1.9rem;
   font-weight: 900;
   letter-spacing: -0.07em;
-  line-height: 0.95;
+  line-height: 0.9;
   color: var(--text);
+}
+
+.logo .mark {
+  color: var(--red);
 }
 
 .nav {
@@ -92,12 +98,16 @@ img {
   font-size: 0.98rem;
   font-weight: 700;
   color: var(--muted);
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
   color: var(--text);
-  transform: translateY(-1px);
+}
+
+.nav-btn {
+  color: var(--white) !important;
 }
 
 .btn {
@@ -109,9 +119,9 @@ img {
   border-radius: 999px;
   font-weight: 800;
   font-size: 0.96rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .btn:hover {
@@ -120,21 +130,12 @@ img {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--red-soft), var(--red-dark));
-  color: var(--white) !important;
+  color: var(--white);
   box-shadow: 0 14px 28px rgba(239, 75, 90, 0.28);
 }
 
-.nav-btn {
-  color: var(--white) !important;
-}
-
-/* ocultar segundo nav duplicado en desktop */
-.site-header__inner > .nav:last-of-type {
-  display: none;
-}
-
 /* =========================
-   LAYOUT GENERAL
+   ARTICLE PAGE
 ========================= */
 
 .article-page {
@@ -142,10 +143,8 @@ img {
 }
 
 .article-grid-layout {
-  width: min(calc(100% - 48px), var(--max));
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
+  grid-template-columns: 290px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
 }
@@ -156,10 +155,10 @@ img {
 
 .article-sidebar {
   position: sticky;
-  top: 118px;
+  top: 108px;
   display: grid;
   gap: 18px;
-  max-height: calc(100vh - 138px);
+  max-height: calc(100vh - 126px);
   overflow-y: auto;
   padding-right: 6px;
   overscroll-behavior: contain;
@@ -185,44 +184,43 @@ img {
 .sidebar-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 24px;
+  border-radius: 26px;
+  padding: 22px;
   box-shadow: var(--shadow-soft);
 }
 
 .sidebar-kicker {
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   color: #5d5652;
   margin-bottom: 14px;
 }
 
 .sidebar-title {
-  font-size: 1.45rem;
-  line-height: 1.02;
+  font-size: 1.25rem;
+  line-height: 1.05;
   letter-spacing: -0.05em;
   font-weight: 900;
   margin-bottom: 12px;
-  color: var(--text);
 }
 
 .sidebar-text {
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.97rem;
   line-height: 1.65;
 }
 
 .sidebar-category {
   display: inline-flex;
   align-items: center;
-  min-height: 38px;
-  padding: 0 14px;
+  min-height: 36px;
   border-radius: 999px;
+  padding: 0 14px;
   background: #fff4f5;
   color: var(--red-dark);
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .sidebar-tags {
@@ -235,13 +233,13 @@ img {
   display: inline-flex;
   align-items: center;
   min-height: 34px;
-  padding: 0 12px;
   border-radius: 999px;
+  padding: 0 14px;
   background: #fff4f5;
-  border: 1px solid rgba(239, 75, 90, 0.08);
+  border: 1px solid rgba(239, 75, 90, 0.1);
   color: var(--red-dark);
-  font-size: 0.84rem;
   font-weight: 800;
+  font-size: 0.84rem;
 }
 
 .sidebar-nav {
@@ -251,9 +249,9 @@ img {
 
 .sidebar-nav a {
   color: var(--muted);
+  font-size: 0.95rem;
   font-weight: 700;
-  font-size: 0.96rem;
-  line-height: 1.4;
+  line-height: 1.45;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -274,14 +272,14 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
+  min-height: 46px;
   padding: 0 18px;
   margin-top: 16px;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--red-soft), var(--red-dark));
   color: var(--white);
   font-weight: 800;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   box-shadow: 0 12px 24px rgba(239, 75, 90, 0.22);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -291,11 +289,11 @@ img {
 }
 
 /* =========================
-   CONTENIDO PRINCIPAL
+   MAIN ARTICLE
 ========================= */
 
 .article-main {
-  background: transparent;
+  min-width: 0;
 }
 
 .article-hero {
@@ -303,8 +301,8 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
-  padding: 42px;
-  margin-bottom: 22px;
+  padding: 44px;
+  margin-bottom: 20px;
 }
 
 .article-meta-top {
@@ -312,36 +310,39 @@ img {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .article-label {
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   color: #5d5652;
 }
 
-.article-category {
+.article-category-pill {
   display: inline-flex;
   align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
+  min-height: 36px;
   border-radius: 999px;
+  padding: 0 14px;
   background: #fff4f5;
   color: var(--red-dark);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 800;
 }
 
 .article-title {
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  line-height: 0.92;
-  letter-spacing: -0.07em;
+  font-size: clamp(2.8rem, 6vw, 5.9rem);
+  line-height: 0.94;
+  letter-spacing: -0.08em;
   font-weight: 900;
-  max-width: 11ch;
+  max-width: 8.5ch;
   margin-bottom: 22px;
-  color: var(--text);
+}
+
+.title-accent {
+  color: var(--red);
 }
 
 .article-keywords {
@@ -352,14 +353,14 @@ img {
 }
 
 .article-intro {
-  max-width: 60ch;
+  max-width: 62ch;
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.75;
 }
 
 /* =========================
-   BLOQUES DE CONTENIDO
+   CONTENT BLOCKS
 ========================= */
 
 .article-content {
@@ -370,7 +371,7 @@ img {
 .content-block {
   background: var(--surface-2);
   border: 1px solid var(--border);
-  border-radius: 28px;
+  border-radius: 26px;
   padding: 30px;
   box-shadow: var(--shadow-soft);
 }
@@ -378,14 +379,14 @@ img {
 .content-kicker {
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   color: var(--red-dark);
   margin-bottom: 14px;
 }
 
 .content-block h2 {
-  font-size: clamp(1.55rem, 3vw, 2.2rem);
-  line-height: 1.03;
+  font-size: clamp(1.55rem, 3vw, 2.1rem);
+  line-height: 1.04;
   letter-spacing: -0.05em;
   font-weight: 900;
   margin-bottom: 14px;
@@ -394,16 +395,16 @@ img {
 
 .content-block p {
   color: #2b2b2b;
-  font-size: 1rem;
   line-height: 1.8;
+  font-size: 1rem;
 }
 
 /* =========================
-   CONCLUSIÓN
+   CONCLUSION
 ========================= */
 
 .conclusion-section {
-  margin-top: 24px;
+  margin-top: 22px;
 }
 
 .conclusion-card {
@@ -413,33 +414,31 @@ img {
     rgba(252, 251, 248, 1) 100%
   );
   border: 1px solid rgba(239, 75, 90, 0.12);
-  border-radius: 30px;
-  padding: 32px;
+  border-radius: 28px;
+  padding: 30px;
   box-shadow: var(--shadow-soft);
 }
 
 .conclusion-kicker {
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   color: var(--red-dark);
   margin-bottom: 14px;
 }
 
 .conclusion-card h2 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  line-height: 1.02;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  line-height: 1.04;
   letter-spacing: -0.05em;
   font-weight: 900;
   margin-bottom: 14px;
-  color: var(--text);
 }
 
 .conclusion-text {
   max-width: 62ch;
   color: #2b2b2b;
   line-height: 1.8;
-  font-size: 1rem;
 }
 
 /* =========================
@@ -447,7 +446,7 @@ img {
 ========================= */
 
 .faq-section {
-  margin-top: 24px;
+  margin-top: 22px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 30px;
@@ -461,7 +460,7 @@ img {
 
 .faq-heading h2 {
   font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-  line-height: 1.02;
+  line-height: 1.03;
   letter-spacing: -0.05em;
   font-weight: 900;
   color: var(--text);
@@ -484,12 +483,12 @@ img {
   list-style: none;
   cursor: pointer;
   padding: 20px 22px;
+  padding-right: 56px;
   font-weight: 800;
   color: var(--text);
   font-size: 1rem;
   line-height: 1.5;
   position: relative;
-  padding-right: 56px;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -534,7 +533,7 @@ img {
 
 @media (max-width: 1100px) {
   .article-grid-layout {
-    grid-template-columns: 280px minmax(0, 1fr);
+    grid-template-columns: 250px minmax(0, 1fr);
     gap: 22px;
   }
 
@@ -544,8 +543,9 @@ img {
 }
 
 @media (max-width: 980px) {
-  .site-header__inner {
+  .topbar-inner {
     min-height: 78px;
+    flex-wrap: wrap;
   }
 
   .article-grid-layout {
@@ -577,17 +577,12 @@ img {
 }
 
 @media (max-width: 680px) {
-  .site-header__inner {
+  .container {
     width: min(calc(100% - 20px), var(--max));
-    gap: 14px;
   }
 
   .nav {
     gap: 12px;
-  }
-
-  .article-grid-layout {
-    width: min(calc(100% - 20px), var(--max));
   }
 
   .article-hero,
@@ -600,30 +595,16 @@ img {
   }
 
   .article-title {
-    font-size: 2.5rem;
-    line-height: 0.95;
+    font-size: 2.6rem;
+    line-height: 0.96;
   }
 
   .faq-item summary {
     padding: 18px 18px;
-    padding-right: 52px;
+    padding-right: 50px;
   }
 
   .faq-answer {
     padding: 0 18px 18px;
-  }
-}
-
-@media (max-width: 640px) {
-  .site-header__inner {
-    justify-content: space-between;
-  }
-
-  .site-header__inner > .nav:first-of-type {
-    display: none;
-  }
-
-  .site-header__inner > .nav:last-of-type {
-    display: flex;
   }
 }
