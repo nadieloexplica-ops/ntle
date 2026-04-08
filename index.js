@@ -1,75 +1,48 @@
-const searchInput = document.getElementById("articleSearch");
-const clearBtn = document.getElementById("clearSearch");
-const articleCards = document.querySelectorAll(".article-card");
-const filterButtons = document.querySelectorAll(".filter-tag");
-const topicButtons = document.querySelectorAll(".topic-box");
-const noResults = document.getElementById("noResults");
-const articlesSection = document.getElementById("articulos");
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector(".site-nav");
+const backToTop = document.querySelector(".back-to-top");
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
 
-let activeFilter = "all";
-
-function updateVisibleArticles() {
-  const searchTerm = searchInput.value.toLowerCase().trim();
-  let visibleCount = 0;
-
-  articleCards.forEach((card) => {
-    const title = card.dataset.title.toLowerCase();
-    const category = card.dataset.category;
-
-    const matchesSearch = title.includes(searchTerm);
-    const matchesFilter = activeFilter === "all" || category === activeFilter;
-
-    if (matchesSearch && matchesFilter) {
-      card.style.display = "flex";
-      visibleCount += 1;
-    } else {
-      card.style.display = "none";
-    }
+if (navToggle && siteNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  noResults.style.display = visibleCount === 0 ? "block" : "none";
-}
-
-function setActiveFilterButton(filterValue) {
-  filterButtons.forEach((button) => {
-    button.classList.toggle("active", button.dataset.filter === filterValue);
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
   });
 }
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.filter;
-    setActiveFilterButton(activeFilter);
-    updateVisibleArticles();
-  });
+window.addEventListener("scroll", () => {
+  if (!backToTop) return;
+
+  if (window.scrollY > 500) {
+    backToTop.classList.add("is-visible");
+  } else {
+    backToTop.classList.remove("is-visible");
+  }
 });
 
-topicButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.topic;
-    setActiveFilterButton(activeFilter);
-    updateVisibleArticles();
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    if (articlesSection) {
-      articlesSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+    const nombre = document.getElementById("nombre")?.value.trim();
+    const email = document.getElementById("email")?.value.trim();
+    const mensaje = document.getElementById("mensaje")?.value.trim();
+
+    if (!nombre || !email || !mensaje) {
+      formMessage.textContent = "Completa al menos nombre, email y mensaje.";
+      return;
     }
-  });
-});
 
-if (searchInput) {
-  searchInput.addEventListener("input", updateVisibleArticles);
-}
-
-if (clearBtn) {
-  clearBtn.addEventListener("click", () => {
-    searchInput.value = "";
-    activeFilter = "all";
-    setActiveFilterButton("all");
-    updateVisibleArticles();
+    formMessage.textContent =
+      "Formulario listo. Cuando conectes tu sistema de envío, este mensaje se podrá enviar.";
+    contactForm.reset();
   });
 }
-
-updateVisibleArticles();
