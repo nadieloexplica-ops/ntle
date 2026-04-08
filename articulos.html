@@ -8,51 +8,54 @@
     name="description"
     content="Todos los artículos de Nadie te lo explica, ordenados por temas."
   />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
+
   <link rel="stylesheet" href="articulos.css" />
 </head>
 <body>
-  <!-- MISMA CABECERA QUE EL ÍNDICE -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">nadie te lo explica</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="logo">
+        nadie te lo <span class="mark">explica</span>
+      </a>
 
-      <nav class="main-nav" aria-label="Navegación principal">
+      <nav class="nav">
         <a href="index.html#temas-destacados">Temas</a>
-        <a href="articulos.html" class="is-active">Artículos</a>
-        <a href="index.html#contacto">Contáctanos</a>
+        <a href="articulos.html" class="active">Artículos</a>
+        <a href="index.html#contacto" class="btn btn-primary nav-btn">Contáctanos</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="articles-hero">
       <div class="container">
         <div class="articles-hero-shell">
           <div class="hero-copy">
             <p class="eyebrow">ARTÍCULOS</p>
-            <h1 class="page-title">Todo lo que nadie te explica, ordenado para encontrarlo rápido.</h1>
+            <h1 class="page-title">Todo lo que nadie te explica, ordenado por temas.</h1>
             <p class="page-text">
-              Busca por palabra clave o filtra por tema. Aquí reunimos contenidos prácticos
-              sobre dinero, trabajo, vivienda y trámites para que no tengas que ir
-              saltando entre mil webs.
+              Busca por palabra clave o entra directamente en el bloque que más te preocupe.
+              Aquí reunimos guías claras sobre dinero, vivienda, trabajo, inversión y trámites.
             </p>
           </div>
 
           <div class="hero-search-card">
             <label for="articleSearch" class="search-label">Buscar artículo</label>
+
             <div class="search-input-wrap">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13Zm0 1.8a4.7 4.7 0 1 0 0 9.4a4.7 4.7 0 0 0 0-9.4Zm8.37 11.1 2.63 2.63-1.27 1.27-2.63-2.63 1.27-1.27Z"
                 />
               </svg>
+
               <input
                 id="articleSearch"
                 type="search"
@@ -63,84 +66,79 @@
 
             <div class="results-counter">
               <strong id="resultsCount">0</strong>
-              <span>artículos</span>
+              <span>artículos encontrados</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FILTROS -->
     <section class="filters-section">
       <div class="container">
         <div class="filters-bar" role="tablist" aria-label="Filtrar artículos por tema">
           <button class="filter-pill is-active" type="button" data-filter="all">Todos</button>
-          <button class="filter-pill" type="button" data-filter="salario">Salario</button>
           <button class="filter-pill" type="button" data-filter="finanzas">Finanzas personales</button>
-          <button class="filter-pill" type="button" data-filter="vivienda">Vivienda</button>
-          <button class="filter-pill" type="button" data-filter="burocracia">Burocracia</button>
-          <button class="filter-pill" type="button" data-filter="trabajo">Trabajo</button>
+          <button class="filter-pill" type="button" data-filter="inversiones">Inversiones</button>
+          <button class="filter-pill" type="button" data-filter="vivienda">Vivienda y hogar</button>
+          <button class="filter-pill" type="button" data-filter="trabajo">Trabajo y salario</button>
+          <button class="filter-pill" type="button" data-filter="impuestos">Impuestos y burocracia</button>
         </div>
       </div>
     </section>
 
-    <!-- CONTENIDO -->
     <section class="articles-section">
       <div class="container">
         <div class="articles-layout">
-          <!-- PANEL IZQUIERDO -->
           <aside class="topics-panel">
             <p class="eyebrow">TEMAS</p>
-            <h2 class="panel-title">Empieza por lo que más te preocupa.</h2>
+            <h2 class="panel-title">Empieza por el bloque que más te preocupa.</h2>
             <p class="panel-text">
-              Cada bloque agrupa artículos relacionados para que puedas orientarte mejor
-              y no entrar a ciegas.
+              Cada grupo reúne artículos relacionados para que encontrar lo que necesitas sea más fácil.
             </p>
 
             <div class="topic-list">
-              <button class="topic-card" type="button" data-filter="salario">
-                <span class="topic-icon">💼</span>
-                <div>
-                  <strong>Salario</strong>
-                  <p>Nómina, bruto, neto y sueldo real.</p>
-                </div>
-              </button>
-
               <button class="topic-card" type="button" data-filter="finanzas">
                 <span class="topic-icon">💸</span>
                 <div>
                   <strong>Finanzas personales</strong>
-                  <p>Presupuesto, ahorro y control del dinero.</p>
+                  <p>Presupuesto, ahorro, gastos y hábitos básicos para organizarte mejor.</p>
+                </div>
+              </button>
+
+              <button class="topic-card" type="button" data-filter="inversiones">
+                <span class="topic-icon">📈</span>
+                <div>
+                  <strong>Inversiones</strong>
+                  <p>Primeros pasos para invertir con criterio y entender riesgos.</p>
                 </div>
               </button>
 
               <button class="topic-card" type="button" data-filter="vivienda">
                 <span class="topic-icon">🏠</span>
                 <div>
-                  <strong>Vivienda</strong>
-                  <p>Alquiler, contrato, fianza y gastos de hogar.</p>
-                </div>
-              </button>
-
-              <button class="topic-card" type="button" data-filter="burocracia">
-                <span class="topic-icon">🧾</span>
-                <div>
-                  <strong>Burocracia</strong>
-                  <p>Empadronamiento, trámites y documentación útil.</p>
+                  <strong>Vivienda y hogar</strong>
+                  <p>Alquiler, facturas, suministros, mudanzas y contratos.</p>
                 </div>
               </button>
 
               <button class="topic-card" type="button" data-filter="trabajo">
-                <span class="topic-icon">📄</span>
+                <span class="topic-icon">💼</span>
                 <div>
-                  <strong>Trabajo</strong>
-                  <p>Contratos, condiciones y puntos clave al empezar.</p>
+                  <strong>Trabajo y salario</strong>
+                  <p>Nóminas, contratos, sueldo neto y claves laborales.</p>
+                </div>
+              </button>
+
+              <button class="topic-card" type="button" data-filter="impuestos">
+                <span class="topic-icon">🧾</span>
+                <div>
+                  <strong>Impuestos y burocracia</strong>
+                  <p>Renta, Hacienda, empadronamiento y trámites útiles.</p>
                 </div>
               </button>
             </div>
           </aside>
 
-          <!-- RESULTADOS -->
           <section class="results-panel">
             <div class="results-header">
               <div>
@@ -150,88 +148,152 @@
             </div>
 
             <div class="articles-grid" id="articlesGrid">
-              <article
-                class="article-card"
-                data-category="salario"
-                data-search="salario nomina españa conceptos revisar errores sueldo"
-              >
-                <span class="article-topic">Salario</span>
-                <h3><a href="como-leer-una-nomina-espana.html">Cómo leer una nómina en España</a></h3>
-                <p>
-                  Qué significan los conceptos principales, qué debes revisar y cómo detectar
-                  errores o cambios importantes.
-                </p>
-                <a class="article-link" href="nomina.html">Leer artículo</a>
-              </article>
-
-              <article
-                class="article-card"
-                data-category="salario"
-                data-search="salario bruto neto cuanto ganas sueldo real impuestos seguridad social"
-              >
-                <span class="article-topic">Salario</span>
-                <h3><a href="salario-bruto-neto.html">Salario bruto vs neto: cuánto ganas realmente</a></h3>
-                <p>
-                  La diferencia entre lo que acuerdas con la empresa y lo que de verdad entra
-                  en tu cuenta cada mes.
-                </p>
-                <a class="article-link" href="salario-bruto-neto.html">Leer artículo</a>
-              </article>
-
+              <!-- FINANZAS PERSONALES -->
               <article
                 class="article-card"
                 data-category="finanzas"
-                data-search="presupuesto mensual ahorro gastos ingresos control dinero"
+                data-search="presupuesto mensual ahorro gastos ingresos control dinero finanzas personales"
               >
                 <span class="article-topic">Finanzas personales</span>
                 <h3><a href="presupuesto-mensual.html">Cómo hacer tu primer presupuesto mensual</a></h3>
                 <p>
-                  Una forma simple de organizar ingresos, gastos fijos, ahorro y margen real
-                  sin complicarte.
+                  Una forma simple de organizar ingresos, gastos fijos, ahorro y margen real sin complicarte.
                 </p>
                 <a class="article-link" href="presupuesto-mensual.html">Leer artículo</a>
               </article>
 
               <article
                 class="article-card"
-                data-category="vivienda"
-                data-search="alquiler contrato fianza suministros vivienda piso"
+                data-category="finanzas"
+                data-search="fondo emergencia ahorro colchon financiero imprevistos"
               >
-                <span class="article-topic">Vivienda</span>
+                <span class="article-topic">Finanzas personales</span>
+                <h3><a href="fondo-emergencia.html">Qué es un fondo de emergencia y cuánto deberías tener</a></h3>
+                <p>
+                  El colchón financiero básico para afrontar imprevistos sin endeudarte a la primera.
+                </p>
+                <a class="article-link" href="fondo-emergencia.html">Leer artículo</a>
+              </article>
+
+              <!-- INVERSIONES -->
+              <article
+                class="article-card"
+                data-category="inversiones"
+                data-search="invertir empezar a invertir riesgo diversificacion indexados"
+              >
+                <span class="article-topic">Inversiones</span>
+                <h3><a href="empezar-a-invertir.html">Cómo empezar a invertir sin liarte</a></h3>
+                <p>
+                  Riesgo, plazo, diversificación y expectativas realistas para dar los primeros pasos.
+                </p>
+                <a class="article-link" href="empezar-a-invertir.html">Leer artículo</a>
+              </article>
+
+              <article
+                class="article-card"
+                data-category="inversiones"
+                data-search="errores invertir principiante novato inversión"
+              >
+                <span class="article-topic">Inversiones</span>
+                <h3><a href="errores-al-invertir.html">Errores comunes al empezar a invertir</a></h3>
+                <p>
+                  Qué suele salir mal al principio y cómo evitar decisiones impulsivas o poco informadas.
+                </p>
+                <a class="article-link" href="errores-al-invertir.html">Leer artículo</a>
+              </article>
+
+              <!-- VIVIENDA -->
+              <article
+                class="article-card"
+                data-category="vivienda"
+                data-search="alquiler contrato fianza suministros piso vivienda hogar"
+              >
+                <span class="article-topic">Vivienda y hogar</span>
                 <h3><a href="alquiler.html">Qué revisar antes de firmar un alquiler</a></h3>
                 <p>
-                  Las claves del contrato, la fianza, los suministros y las condiciones que
-                  conviene revisar antes de comprometerte.
+                  Las claves del contrato, la fianza, los suministros y las condiciones que conviene mirar.
                 </p>
                 <a class="article-link" href="alquiler.html">Leer artículo</a>
               </article>
 
               <article
                 class="article-card"
-                data-category="burocracia"
-                data-search="empadronamiento tramites documentos ayuntamiento padrón"
+                data-category="vivienda"
+                data-search="facturas hogar luz agua internet gastos casa"
               >
-                <span class="article-topic">Burocracia</span>
-                <h3><a href="empadronamiento.html">Qué es el empadronamiento y para qué sirve</a></h3>
+                <span class="article-topic">Vivienda y hogar</span>
+                <h3><a href="facturas-hogar.html">Qué gastos reales tiene vivir por tu cuenta</a></h3>
                 <p>
-                  Por qué te lo piden en tantos trámites, cómo hacerlo y qué documentos suelen
-                  solicitarte.
+                  Más allá del alquiler: luz, agua, internet, compra, imprevistos y coste real de independizarte.
                 </p>
-                <a class="article-link" href="empadronamiento.html">Leer artículo</a>
+                <a class="article-link" href="facturas-hogar.html">Leer artículo</a>
+              </article>
+
+              <!-- TRABAJO -->
+              <article
+                class="article-card"
+                data-category="trabajo"
+                data-search="nomina españa leer nómina salario descuentos irpf seguridad social"
+              >
+                <span class="article-topic">Trabajo y salario</span>
+                <h3><a href="nomina.html">Cómo leer una nómina en España</a></h3>
+                <p>
+                  Qué significan los conceptos principales, qué debes revisar y cómo detectar errores o cambios.
+                </p>
+                <a class="article-link" href="nomina.html">Leer artículo</a>
               </article>
 
               <article
                 class="article-card"
                 data-category="trabajo"
-                data-search="contrato laboral trabajo jornada periodo prueba salario firmar"
+                data-search="salario bruto neto cuanto ganas sueldo real"
               >
-                <span class="article-topic">Trabajo</span>
+                <span class="article-topic">Trabajo y salario</span>
+                <h3><a href="salario-bruto-neto.html">Salario bruto vs neto: cuánto ganas realmente</a></h3>
+                <p>
+                  La diferencia entre lo que acuerdas con la empresa y lo que de verdad entra en tu cuenta.
+                </p>
+                <a class="article-link" href="salario-bruto-neto.html">Leer artículo</a>
+              </article>
+
+              <article
+                class="article-card"
+                data-category="trabajo"
+                data-search="contrato laboral firmar trabajo jornada periodo prueba"
+              >
+                <span class="article-topic">Trabajo y salario</span>
                 <h3><a href="contrato-laboral.html">Qué debes entender antes de firmar un contrato laboral</a></h3>
                 <p>
-                  Tipo de contrato, jornada, periodo de prueba, salario y otros puntos que
-                  conviene leer con calma.
+                  Tipo de contrato, jornada, periodo de prueba, salario y otros puntos clave para no firmar a ciegas.
                 </p>
                 <a class="article-link" href="contrato-laboral.html">Leer artículo</a>
+              </article>
+
+              <!-- IMPUESTOS -->
+              <article
+                class="article-card"
+                data-category="impuestos"
+                data-search="renta hacienda declaracion irpf impuestos"
+              >
+                <span class="article-topic">Impuestos y burocracia</span>
+                <h3><a href="renta-primeros-pasos.html">La renta sin dramas: primeros pasos para entenderla</a></h3>
+                <p>
+                  Una introducción clara para saber cuándo te toca, qué revisar y qué errores evitar.
+                </p>
+                <a class="article-link" href="renta-primeros-pasos.html">Leer artículo</a>
+              </article>
+
+              <article
+                class="article-card"
+                data-category="impuestos"
+                data-search="empadronamiento tramite documentos ayuntamiento padrón"
+              >
+                <span class="article-topic">Impuestos y burocracia</span>
+                <h3><a href="empadronamiento.html">Qué es el empadronamiento y para qué sirve</a></h3>
+                <p>
+                  Por qué te lo piden en tantos trámites, cómo hacerlo y qué documentos suelen pedirte.
+                </p>
+                <a class="article-link" href="empadronamiento.html">Leer artículo</a>
               </article>
             </div>
 
