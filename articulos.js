@@ -1,49 +1,81 @@
-const searchInput = document.getElementById("article-search");
-const filterButtons = document.querySelectorAll(".filter-btn");
+const searchInput = document.getElementById("articleSearch");
+const resultsCount = document.getElementById("resultsCount");
+const filterButtons = document.querySelectorAll(".filter-pill");
+const topicButtons = document.querySelectorAll(".topic-card");
 const articleCards = document.querySelectorAll(".article-card");
-const resultsCount = document.getElementById("results-count");
-const emptyState = document.getElementById("empty-state");
+const emptyState = document.getElementById("emptyState");
 
 let activeFilter = "all";
 
-function normalizeText(text) {
-  return text.toLowerCase().trim();
+function normalizeText(value) {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
 }
 
-function updateArticles() {
+function applyFilters() {
   const query = normalizeText(searchInput.value);
   let visibleCount = 0;
 
   articleCards.forEach((card) => {
-    const categories = normalizeText(card.dataset.category || "");
-    const searchableText = normalizeText(card.dataset.search || "");
-    const matchesFilter =
-      activeFilter === "all" || categories.includes(activeFilter);
-    const matchesSearch =
-      query === "" || searchableText.includes(query);
+    const category = card.dataset.category;
+    const searchable = normalizeText(card.dataset.search || card.textContent);
 
-    const isVisible = matchesFilter && matchesSearch;
+    const matchesFilter = activeFilter === "all" || category === activeFilter;
+    const matchesQuery = query === "" || searchable.includes(query);
 
-    card.classList.toggle("hidden", !isVisible);
+    const shouldShow = matchesFilter && matchesQuery;
+    card.hidden = !shouldShow;
 
-    if (isVisible) {
+    if (shouldShow) {
       visibleCount += 1;
     }
   });
 
-  resultsCount.textContent = String(visibleCount);
-  emptyState.classList.toggle("hidden", visibleCount > 0);
+  resultsCount.textContent = visibleCount;
+  emptyState.hidden = visibleCount !== 0;
+}
+
+function setActiveFilter(filterName) {
+  activeFilter = filterName;
+
+  filterButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.filter === filterName);
+  });
+
+  applyFilters();
 }
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    filterButtons.forEach((btn) => btn.classList.remove("active"));
-    button.classList.add("active");
-    activeFilter = button.dataset.filter;
-    updateArticles();
+    setActiveFilter(button.dataset.filter);
   });
 });
 
-searchInput.addEventListener("input", updateArticles);
+topicButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setActiveFilter(button.dataset.filter);
 
-updateArticles();
+    const toolbar = document.querySelector(".articles-toolbar");
+    if (toolbar) {
+      toolbar.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+
+searchInput.addEventListener("input", applyFilters);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const topicFromUrl = params.get("tema");
+
+  const validFilters = ["finanzas", "inversiones", "vivienda", "trabajo", "impuestos"];
+
+  if (topicFromUrl && validFilters.includes(topicFromUrl)) {
+    setActiveFilter(topicFromUrl);
+  } else {
+    applyFilters();
+  }
+});
