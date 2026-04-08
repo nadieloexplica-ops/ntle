@@ -29,9 +29,7 @@ function applyFilters() {
     const shouldShow = matchesFilter && matchesQuery;
     card.hidden = !shouldShow;
 
-    if (shouldShow) {
-      visibleCount += 1;
-    }
+    if (shouldShow) visibleCount += 1;
   });
 
   resultsCount.textContent = visibleCount;
@@ -57,11 +55,10 @@ filterButtons.forEach((button) => {
 topicButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setActiveFilter(button.dataset.filter);
-
-    const toolbar = document.querySelector(".articles-toolbar");
-    if (toolbar) {
-      toolbar.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    document.querySelector(".results-panel").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
 });
 
@@ -71,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const topicFromUrl = params.get("tema");
 
-  const validFilters = ["finanzas", "inversiones", "vivienda", "trabajo", "impuestos"];
+  const validFilters = ["salario", "finanzas", "vivienda", "burocracia", "trabajo"];
 
   if (topicFromUrl && validFilters.includes(topicFromUrl)) {
     setActiveFilter(topicFromUrl);
