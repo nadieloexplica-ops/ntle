@@ -3,340 +3,238 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nadie te lo explica</title>
+  <title>Nadie te lo explica | Guías claras para la vida adulta</title>
   <meta
     name="description"
-    content="Guías claras sobre finanzas, inversiones, vivienda, trabajo e impuestos para entender mejor la vida adulta en España."
+    content="Guías claras sobre dinero, trabajo, vivienda, impuestos y vida adulta en España. Explicado fácil, útil y sin tecnicismos."
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
   <header class="site-header" id="top">
-    <div class="container header-shell">
-      <a href="index.html" class="brand" aria-label="Ir a inicio">
-        <span class="brand-mark">n</span>
-        <span class="brand-text">nadie te lo explica</span>
-      </a>
+    <div class="container header-inner">
+      <a href="index.html" class="brand">nadie te lo explica</a>
 
-      <button
-        class="nav-toggle"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-        aria-controls="site-nav"
-      >
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="site-nav" id="site-nav">
+      <nav class="site-nav" aria-label="Principal">
         <a href="#temas">Temas</a>
         <a href="articulos.html">Artículos</a>
-        <a href="#contacto">Contáctanos</a>
+        <a href="#sobre">Sobre la web</a>
+        <a href="#contacto" class="nav-cta">Contáctanos</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
+    <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">GUÍAS CLARAS PARA LA VIDA ADULTA</p>
-          <h1>
-            nadie te lo explica
-            <span>así de claro</span>
-          </h1>
-          <p class="hero-text">
-            Todo lo que deberías saber sobre finanzas, inversiones, vivienda,
-            trabajo, impuestos y trámites cotidianos en España. Sin humo, sin
-            tecnicismos y sin sentirte perdido.
+          <h1>Todo lo que nadie te explicó sobre dinero, trabajo, alquiler y vida real en España.</h1>
+          <p class="lead">
+            Una web pensada para jóvenes adultos que quieren entender lo importante sin humo,
+            sin tecnicismos y sin sentirse perdidos.
           </p>
 
           <div class="hero-actions">
-            <a href="#temas" class="btn btn-primary">Explorar temas</a>
-            <a href="articulos.html" class="btn btn-secondary">Ver artículos</a>
+            <a href="articulos.html" class="btn btn-primary">Ver artículos</a>
+            <a href="#temas" class="btn btn-secondary">Explorar temas</a>
           </div>
 
-          <ul class="hero-points" aria-label="Ventajas principales">
-            <li>Explicado con lenguaje claro</li>
-            <li>Enfocado a jóvenes adultos</li>
-            <li>Hecho para aplicar de verdad</li>
+          <ul class="hero-tags" aria-label="Características de la web">
+            <li>18–30 años</li>
+            <li>Enfoque España</li>
+            <li>Lenguaje claro</li>
           </ul>
         </div>
 
-        <div class="hero-card">
-          <div class="hero-card-badge">Empieza aquí</div>
-          <h2>La web que te explica lo que nadie te enseñó.</h2>
+        <aside class="hero-card" aria-label="Empieza aquí">
+          <p class="card-label">EMPIEZA AQUÍ</p>
+          <h2>La web que te explica lo que normalmente aprendes tarde.</h2>
           <p>
-            Contenido útil para entender tu nómina, hacer un presupuesto,
-            alquilar tu primer piso o no liarte con la renta.
+            Nómina, presupuesto, alquiler, renta, documentos importantes y decisiones básicas
+            para empezar la vida adulta con más claridad.
           </p>
 
-          <div class="hero-tags">
-            <span>Finanzas personales</span>
-            <span>Inversiones</span>
-            <span>Vivienda y hogar</span>
-            <span>Trabajo y salario</span>
-            <span>Impuestos y burocracia</span>
+          <div class="quick-links">
+            <a href="articulos/como-leer-una-nomina-espana.html">Cómo leer una nómina</a>
+            <a href="articulos.html?tema=finanzas-personales">Cómo hacer un presupuesto</a>
+            <a href="articulos.html?tema=vivienda-y-hogar">Primer alquiler en España</a>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <!-- SOBRE LA WEB -->
-    <section class="about section" id="sobre-web">
-      <div class="container">
-        <div class="section-heading compact">
-          <p class="section-kicker">SOBRE LA WEB</p>
-          <h2>Una guía sencilla para entender mejor la vida adulta.</h2>
+    <section class="about-intro section section-soft">
+      <div class="container about-intro-grid">
+        <div>
+          <p class="eyebrow">SOBRE LA WEB</p>
+          <h2>Una base clara para entender mejor esta etapa.</h2>
+        </div>
+        <div>
           <p>
-            Esta web nace para explicar de forma clara todo aquello que casi
-            nadie enseña: cómo organizar tu dinero, entender tu sueldo,
-            alquilar, hacer trámites o empezar a invertir con criterio.
+            Nadie te lo explica nace para reunir en un solo lugar todo eso que suele llegar
+            de golpe: sueldo, alquiler, gastos, burocracia, contratos y organización personal.
+          </p>
+          <p>
+            La idea es simple: entrar, entender rápido y salir con una visión mucho más clara
+            de lo que tienes delante.
           </p>
         </div>
-
-        <div class="about-grid">
-          <article class="about-card">
-            <div class="about-icon">◎</div>
-            <h3>Qué encontrarás</h3>
-            <p>
-              Artículos prácticos, directos y ordenados por temas para que
-              encuentres rápido justo lo que necesitas.
-            </p>
-          </article>
-
-          <article class="about-card">
-            <div class="about-icon">◉</div>
-            <h3>Cómo está pensado</h3>
-            <p>
-              Para leer sin agobio: bloques claros, buen espacio entre secciones
-              y una navegación simple desde móvil y ordenador.
-            </p>
-          </article>
-
-          <article class="about-card">
-            <div class="about-icon">◌</div>
-            <h3>Para quién es</h3>
-            <p>
-              Para jóvenes adultos que quieren entender mejor su día a día sin
-              tener que descifrar lenguaje técnico ni información dispersa.
-            </p>
-          </article>
-        </div>
       </div>
     </section>
 
-    <!-- TEMAS -->
-    <section class="topics section" id="temas">
+    <section id="temas" class="topics section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">TEMAS PRINCIPALES</p>
-          <h2>Empieza por el tema que más te preocupa.</h2>
+          <p class="eyebrow">TEMAS</p>
+          <h2>Empieza por el bloque que más te interese.</h2>
           <p>
-            Cada bloque agrupa artículos relacionados para que navegar sea más
-            fácil y entiendas rápidamente de qué va cada contenido.
+            Los contenidos están agrupados para que orientarte sea fácil y no tengas que buscar
+            a ciegas.
           </p>
         </div>
 
         <div class="topics-grid">
           <a class="topic-card" href="articulos.html?tema=finanzas-personales">
-            <div class="topic-top">
-              <div class="topic-emoji">💸</div>
-              <span class="topic-arrow">→</span>
-            </div>
+            <span class="topic-icon">€</span>
             <h3>Finanzas personales</h3>
-            <p>
-              Presupuesto, ahorro, gastos, control del dinero y hábitos básicos
-              para organizarte mejor.
-            </p>
-          </a>
-
-          <a class="topic-card" href="articulos.html?tema=inversiones">
-            <div class="topic-top">
-              <div class="topic-emoji">📈</div>
-              <span class="topic-arrow">→</span>
-            </div>
-            <h3>Inversiones</h3>
-            <p>
-              Primeros pasos para invertir con criterio, entender riesgos y
-              evitar humo financiero.
-            </p>
-          </a>
-
-          <a class="topic-card" href="articulos.html?tema=vivienda-y-hogar">
-            <div class="topic-top">
-              <div class="topic-emoji">🏠</div>
-              <span class="topic-arrow">→</span>
-            </div>
-            <h3>Vivienda y hogar</h3>
-            <p>
-              Alquiler, facturas, suministros, mudanzas, contratos y todo lo que
-              implica vivir por tu cuenta.
-            </p>
+            <p>Presupuesto, ahorro, gastos, control del dinero y decisiones básicas.</p>
           </a>
 
           <a class="topic-card" href="articulos.html?tema=trabajo-y-salario">
-            <div class="topic-top">
-              <div class="topic-emoji">💼</div>
-              <span class="topic-arrow">→</span>
-            </div>
+            <span class="topic-icon">▣</span>
             <h3>Trabajo y salario</h3>
-            <p>
-              Nóminas, contratos, sueldo neto, derechos laborales y claves para
-              entender tu vida profesional.
-            </p>
+            <p>Nómina, contrato, sueldo neto, salario real y primeros pasos laborales.</p>
+          </a>
+
+          <a class="topic-card" href="articulos.html?tema=vivienda-y-hogar">
+            <span class="topic-icon">⌂</span>
+            <h3>Vivienda y hogar</h3>
+            <p>Alquiler, fianza, suministros, costes reales y vida por tu cuenta.</p>
           </a>
 
           <a class="topic-card" href="articulos.html?tema=impuestos-y-burocracia">
-            <div class="topic-top">
-              <div class="topic-emoji">🧾</div>
-              <span class="topic-arrow">→</span>
-            </div>
+            <span class="topic-icon">✓</span>
             <h3>Impuestos y burocracia</h3>
-            <p>
-              Renta, Hacienda, empadronamiento, trámites útiles y papeleo
-              explicado con claridad.
-            </p>
+            <p>Renta, Hacienda, empadronamiento y trámites explicados claro.</p>
+          </a>
+
+          <a class="topic-card" href="articulos.html?tema=vida-adulta">
+            <span class="topic-icon">○</span>
+            <h3>Vida adulta</h3>
+            <p>Organización, hábitos, responsabilidades y situaciones que aparecen de golpe.</p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- CTA ARTÍCULOS -->
-    <section class="featured-link section">
+    <section class="featured section">
       <div class="container">
-        <div class="featured-box">
-          <div class="featured-copy">
-            <p class="section-kicker">ARTÍCULOS</p>
-            <h2>Prefieres ir directamente al contenido.</h2>
-            <p>
-              Puedes entrar en la página de artículos y buscar por nombre o por
-              tema para encontrar lo que necesitas más rápido.
-            </p>
-          </div>
-          <a href="articulos.html" class="btn btn-primary">Ir a artículos</a>
+        <div class="section-heading">
+          <p class="eyebrow">ARTÍCULOS DESTACADOS</p>
+          <h2>Empieza por estos contenidos.</h2>
+          <p>
+            Una selección de artículos base para entender mejor dinero, trabajo y primeros pasos.
+          </p>
+        </div>
+
+        <div class="articles-grid">
+          <a class="article-card" href="articulos/como-leer-una-nomina-espana.html">
+            <span class="article-topic">Trabajo y salario</span>
+            <h3>Cómo leer una nómina en España sin perderte</h3>
+            <p>Qué te pagan, qué te descuentan y qué deberías revisar cada mes.</p>
+          </a>
+
+          <a class="article-card" href="articulos.html?tema=finanzas-personales">
+            <span class="article-topic">Finanzas personales</span>
+            <h3>Cómo hacer un presupuesto mensual sin agobiarte</h3>
+            <p>Una forma simple de ordenar ingresos, gastos y margen real.</p>
+          </a>
+
+          <a class="article-card" href="articulos.html?tema=vivienda-y-hogar">
+            <span class="article-topic">Vivienda y hogar</span>
+            <h3>Qué mirar antes de alquilar tu primer piso</h3>
+            <p>Lo importante antes de firmar: fianza, contrato, suministros y coste real.</p>
+          </a>
+        </div>
+
+        <div class="section-footer">
+          <a href="articulos.html" class="btn btn-secondary">Ver todos los artículos</a>
         </div>
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section class="contact section" id="contacto">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">CONTACTO</p>
-          <h2>¿Hay un tema que quieres que expliquemos?</h2>
+    <section id="sobre" class="about section section-soft">
+      <div class="container info-grid">
+        <article class="info-card">
+          <h3>Por qué existe</h3>
           <p>
-            Escríbenos si hay una duda de vida adulta que te gustaría ver en la
-            web: nómina, alquiler, impuestos, ahorro, inversión o cualquier
-            trámite que se haga bola.
+            Porque muchas personas entran en la vida adulta sin una guía clara sobre lo básico:
+            leer una nómina, calcular cuánto cuesta vivir solo o entender qué trámites importan.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Cómo está pensada</h3>
+          <p>
+            Para entrar por tema, encontrar un artículo concreto y entender rápido lo importante
+            sin lenguaje innecesariamente técnico.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Qué busca</h3>
+          <p>
+            Dar contexto, orden y claridad a cosas que muchas veces se aprenden tarde, mal o
+            a base de prueba y error.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact section">
+      <div class="container contact-shell">
+        <div class="contact-copy">
+          <p class="eyebrow">CONTÁCTANOS</p>
+          <h2>¿Hay algún tema que te gustaría ver aquí?</h2>
+          <p>
+            Si echas en falta un artículo, quieres proponer una idea o enviarnos una mejora,
+            este espacio está para eso.
           </p>
         </div>
 
-        <div class="contact-grid">
-          <aside class="contact-info">
-            <article class="contact-info-card">
-              <h3>Propón un tema</h3>
-              <p>
-                Dinos qué artículo te gustaría leer o qué problema te gustaría
-                entender mejor.
-              </p>
-            </article>
-
-            <article class="contact-info-card">
-              <h3>Corrige una guía</h3>
-              <p>
-                Si ves algo confuso, mejorable o desactualizado, lo revisamos.
-              </p>
-            </article>
-
-            <article class="contact-info-card">
-              <h3>Colaboraciones</h3>
-              <p>
-                También puedes escribirnos para propuestas, ideas o posibles
-                colaboraciones.
-              </p>
-            </article>
-          </aside>
-
-          <div class="contact-form-wrap">
-            <div class="form-intro">
-              <p class="section-kicker">ESCRÍBENOS</p>
-              <h3>Cuéntanos qué necesitas</h3>
-              <p>
-                Cuanto más claro sea el mensaje, más fácil será preparar
-                contenido útil.
-              </p>
-            </div>
-
-            <form class="contact-form" id="contactForm">
-              <div class="form-row">
-                <div class="field">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
-                </div>
-
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="tu@email.com" />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="field">
-                  <label for="motivo">Motivo</label>
-                  <select id="motivo" name="motivo">
-                    <option value="">Selecciona una opción</option>
-                    <option value="tema">Proponer un tema</option>
-                    <option value="correccion">Corregir un artículo</option>
-                    <option value="colaboracion">Colaboración</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
-
-                <div class="field">
-                  <label for="tema">Tema relacionado</label>
-                  <select id="tema" name="tema">
-                    <option value="">Selecciona un tema</option>
-                    <option value="finanzas-personales">Finanzas personales</option>
-                    <option value="inversiones">Inversiones</option>
-                    <option value="vivienda-y-hogar">Vivienda y hogar</option>
-                    <option value="trabajo-y-salario">Trabajo y salario</option>
-                    <option value="impuestos-y-burocracia">Impuestos y burocracia</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="mensaje">Mensaje</label>
-                <textarea
-                  id="mensaje"
-                  name="mensaje"
-                  rows="6"
-                  placeholder="Escribe aquí tu mensaje"
-                ></textarea>
-              </div>
-
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                <p class="form-note" id="formMessage" aria-live="polite"></p>
-              </div>
-            </form>
-          </div>
+        <div class="contact-box">
+          <p>Propuestas, dudas, ideas de mejora o nuevos temas para la web.</p>
+          <a class="btn btn-primary" href="mailto:contacto@nadieteloexplica.com">
+            Enviar correo
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <a href="#top" class="back-to-top" aria-label="Volver arriba">↑</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>© 2026 Nadie te lo explica</strong>
+        <p>Guías claras para la vida adulta.</p>
+      </div>
 
-  <script src="script.js"></script>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Inicio</a>
+        <a href="articulos.html">Artículos</a>
+        <a href="#sobre">Sobre la web</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
