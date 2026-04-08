@@ -4,26 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artículos | Nadie te lo explica</title>
-  <meta
-    name="description"
-    content="Todos los artículos de Nadie te lo explica, organizados por temas y con buscador."
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
   />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="articulos.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="index.html" class="logo">
-        nadie te lo <span class="mark">explica</span>
+      <a class="logo" href="index.html">
+        nadie <span class="mark">te lo explica</span>
       </a>
 
       <nav class="nav" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
         <a href="index.html#temas-destacados">Temas</a>
         <a href="articulos.html" class="active">Artículos</a>
         <a href="index.html#contacto" class="btn btn-primary nav-btn">Contáctanos</a>
@@ -31,82 +27,190 @@
     </div>
   </header>
 
-  <main>
-    <section class="articles-header" aria-label="Cabecera de artículos y buscador">
-  <div class="container">
-    <div class="articles-header-grid">
-      <div class="articles-intro-card">
-        <p class="eyebrow">ARTÍCULOS</p>
-        <h1 class="page-title">Todos los artículos, ordenados por temas.</h1>
-        <p class="page-text">
-          Busca por palabra clave o navega por tema. Cada artículo tiene su propia
-          página y algunos incluyen plantillas o archivos descargables para que
-          puedas aplicarlo enseguida.
-        </p>
-      </div>
+  <main class="articles-page">
+    <section class="articles-header">
+      <div class="container">
+        <div class="articles-header-grid">
+          <div class="articles-intro-card">
+            <p class="eyebrow">ARTÍCULOS</p>
+            <h1 class="page-title">Todo lo que nadie te explica, ordenado por temas.</h1>
+            <p class="page-text">
+              Busca por palabra clave o filtra por categoría. Cada artículo está
+              pensado para ayudarte a entender lo práctico de la vida adulta sin
+              tecnicismos ni rodeos.
+            </p>
+          </div>
 
-      <aside class="articles-search-card">
-        <label class="search-label" for="articleSearch">Buscar artículos</label>
+          <aside class="articles-search-card">
+            <label class="search-label" for="article-search">Buscar artículo</label>
 
-        <div class="search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13Zm0 1.8a4.7 4.7 0 1 0 0 9.4a4.7 4.7 0 0 0 0-9.4Zm6.95 10.38 3.55 3.55-1.27 1.27-3.55-3.55 1.27-1.27Z" fill="currentColor"/>
-          </svg>
+            <div class="search-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13Zm0 0 9 9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <input
+                id="article-search"
+                class="search-input"
+                type="search"
+                placeholder="Ej. nómina, alquiler, empadronamiento..."
+                autocomplete="off"
+              />
+            </div>
 
-          <input
-            id="articleSearch"
-            class="search-input"
-            type="search"
-            placeholder="Ej. nómina, ahorro..."
-          />
+            <p class="search-help">
+              Escribe una palabra y verás solo los artículos relacionados.
+            </p>
+          </aside>
         </div>
-        <section class="articles-toolbar" aria-label="Filtros y resultados">
-  <div class="container">
-    <div class="toolbar-shell toolbar-shell-bottom">
-      <div class="filters">
-        <button class="filter-btn active" data-filter="todos" type="button">Todos</button>
-        <button class="filter-btn" data-filter="finanzas-personales" type="button">Finanzas personales</button>
-        <button class="filter-btn" data-filter="trabajo-y-salario" type="button">Trabajo y salario</button>
-      </div>
-
-      <p class="results-text" id="resultsCount">0 artículos encontrados</p>
-    </div>
-  </div>
-</section>
-    
-    <section class="container">
-      <div class="no-results hidden" id="noResults">
-        <h2>No hemos encontrado artículos</h2>
-        <p>Prueba con otra búsqueda o cambia el filtro.</p>
       </div>
     </section>
-      </aside>
-    </div>
-  </div>
-</section>
 
-
-    <section class="article-groups">
+    <section class="articles-toolbar">
       <div class="container">
-        <section class="tema-group hidden" data-group="finanzas-personales">
-          <div class="section-heading">
-            <p class="eyebrow">TEMA</p>
-            <h2 class="section-title">Finanzas personales</h2>
-            <p class="section-text">Ahorro, control del dinero y organización mensual.</p>
+        <div class="toolbar-shell">
+          <div class="filters" role="tablist" aria-label="Filtrar artículos por tema">
+            <button class="filter-btn active" type="button" data-filter="all">Todos</button>
+            <button class="filter-btn" type="button" data-filter="salario">Salario</button>
+            <button class="filter-btn" type="button" data-filter="finanzas">Finanzas personales</button>
+            <button class="filter-btn" type="button" data-filter="vivienda">Vivienda</button>
+            <button class="filter-btn" type="button" data-filter="burocracia">Burocracia</button>
+            <button class="filter-btn" type="button" data-filter="trabajo">Trabajo</button>
           </div>
 
-          <div class="article-grid" id="grupo-finanzas-personales"></div>
-        </section>
+          <p class="results-text">
+            <span id="results-count">0</span> artículos
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <section class="tema-group hidden" data-group="trabajo-y-salario">
-          <div class="section-heading">
-            <p class="eyebrow">TEMA</p>
-            <h2 class="section-title">Trabajo y salario</h2>
-            <p class="section-text">Nóminas, sueldo neto, bruto y conceptos laborales básicos.</p>
+    <section class="articles-listing">
+      <div class="container">
+        <div class="articles-grid" id="articles-grid">
+          <article
+            class="article-card"
+            data-category="salario trabajo"
+            data-search="nomina salario sueldo bruto neto irpf trabajo"
+          >
+            <div class="article-meta">
+              <span class="article-tag">Salario</span>
+            </div>
+            <h2>Cómo leer una nómina en España</h2>
+            <p>
+              Qué significan los conceptos principales, qué debes revisar y cómo
+              detectar errores o cambios importantes.
+            </p>
+            <div class="article-actions">
+              <a class="article-link" href="articulos/como-leer-una-nomina-espana.html">Leer artículo</a>
+            </div>
+          </article>
+
+          <article
+            class="article-card"
+            data-category="salario finanzas"
+            data-search="salario bruto neto sueldo real impuestos finanzas"
+          >
+            <div class="article-meta">
+              <span class="article-tag">Salario</span>
+            </div>
+            <h2>Salario bruto vs neto: cuánto ganas realmente</h2>
+            <p>
+              La diferencia entre lo que acuerdas con la empresa y lo que de verdad
+              entra en tu cuenta cada mes.
+            </p>
+            <div class="article-actions">
+              <a class="article-link" href="articulos/salario-bruto-vs-neto.html">Leer artículo</a>
+            </div>
+          </article>
+
+          <article
+            class="article-card"
+            data-category="finanzas"
+            data-search="presupuesto dinero ahorro gastos finanzas personales"
+          >
+            <div class="article-meta">
+              <span class="article-tag">Finanzas personales</span>
+            </div>
+            <h2>Cómo hacer tu primer presupuesto mensual</h2>
+            <p>
+              Una forma simple de organizar ingresos, gastos fijos, ahorro y margen
+              real sin complicarte.
+            </p>
+            <div class="article-actions">
+              <a class="article-link" href="articulos/primer-presupuesto-mensual.html">Leer artículo</a>
+            </div>
+          </article>
+
+          <article
+            class="article-card"
+            data-category="vivienda"
+            data-search="alquiler piso fianza contrato vivienda"
+          >
+            <div class="article-meta">
+              <span class="article-tag">Vivienda</span>
+            </div>
+            <h2>Qué revisar antes de firmar un alquiler</h2>
+            <p>
+              Las claves del contrato, la fianza, los suministros y las condiciones
+              que conviene revisar antes de comprometerte.
+            </p>
+            <div class="article-actions">
+              <a class="article-link" href="articulos/revisar-antes-firmar-alquiler.html">Leer artículo</a>
+            </div>
+          </article>
+
+          <article
+            class="article-card"
+            data-category="burocracia"
+            data-search="empadronamiento padron burocracia ayuntamiento tramites"
+          >
+            <div class="article-meta">
+              <span class="article-tag">Burocracia</span>
+            </div>
+            <h2>Qué es el empadronamiento y para qué sirve</h2>
+            <p>
+              Por qué te lo piden en tantos trámites, cómo hacerlo y qué documentos
+              suelen solicitarte.
+            </p>
+            <div class="article-actions">
+              <a class="article-link" href="articulos/empadronamiento-que-es.html">Leer artículo</a>
+            </div>
+          </article>
+
+          <article
+            class="article-card"
+            data-category="trabajo"
+            data-search="contrato laboral trabajo temporal indefinido empresa"
+          >
+            <div class="article-meta">
+              <span class="article-tag">Trabajo</span>
+            </div>
+            <h2>Qué debes entender antes de firmar un contrato laboral</h2>
+            <p>
+              Tipo de contrato, jornada, periodo de prueba, salario y otros puntos
+              que conviene leer con calma.
+            </p>
+            <div class="article-actions">
+              <a class="article-link" href="articulos/antes-firmar-contrato-laboral.html">Leer artículo</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state hidden" id="empty-state">
+          <div class="empty-state-card">
+            <p class="eyebrow">SIN RESULTADOS</p>
+            <h2>No hemos encontrado artículos con ese filtro.</h2>
+            <p>
+              Prueba con otra palabra o vuelve a “Todos” para ver el listado completo.
+            </p>
           </div>
-
-          <div class="article-grid" id="grupo-trabajo-y-salario"></div>
-        </section>
+        </div>
       </div>
     </section>
   </main>
