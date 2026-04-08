@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nadie te lo explica</title>
+  <meta
+    name="description"
+    content="Guías claras sobre finanzas, trabajo, vivienda, burocracia y vida adulta en España para jóvenes adultos."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="img/logo.png" alt="Nadie te lo explica" class="brand-logo" />
+        <span class="brand-text">Nadie te lo explica</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#temas">Temas</a>
+        <a href="#articulos">Artículos</a>
+        <a href="#sobre">Sobre la web</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">GUÍAS CLARAS PARA LA VIDA ADULTA</p>
+          <h1>
+            Todo lo que nadie te explica sobre
+            <span>dinero, vivienda, trabajo y trámites</span>
+          </h1>
+          <p class="hero-text">
+            Una web pensada para entender de forma simple todo eso que empiezas
+            a necesitar cuando dejas de ser adolescente y nadie te lo ha enseñado bien.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#temas" class="btn btn-primary">Explorar temas</a>
+            <a href="#articulos" class="btn btn-secondary">Buscar artículos</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-badge">Nuevo enfoque</div>
+          <h2>Todo en una sola página</h2>
+          <p>
+            Ahora puedes entrar por tema, buscar por nombre y ver todos los artículos
+            directamente desde el inicio.
+          </p>
+          <ul>
+            <li>Temas principales agrupados</li>
+            <li>Buscador simple por nombre</li>
+            <li>Todos los artículos visibles debajo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMAS -->
+    <section class="topics-section" id="temas">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">TEMAS</p>
+          <h2>Los 5 grupos principales</h2>
+          <p>
+            Empieza por el tema que más te interese y luego encuentra el artículo exacto con el buscador.
+          </p>
+        </div>
+
+        <div class="topics-grid">
+          <a href="#articulos" class="topic-box" data-topic="finanzas-personales">
+            <div class="topic-icon">💸</div>
+            <div class="topic-content">
+              <h3>Finanzas personales</h3>
+              <p>Ahorrar, organizar tu dinero, entender gastos y empezar con buen criterio.</p>
+            </div>
+          </a>
+
+          <a href="#articulos" class="topic-box" data-topic="trabajo">
+            <div class="topic-icon">💼</div>
+            <div class="topic-content">
+              <h3>Trabajo</h3>
+              <p>Nómina, contratos, salario bruto y neto, derechos básicos y primeros pasos.</p>
+            </div>
+          </a>
+
+          <a href="#articulos" class="topic-box" data-topic="vivienda">
+            <div class="topic-icon">🏠</div>
+            <div class="topic-content">
+              <h3>Vivienda</h3>
+              <p>Alquiler, gastos, fianza, suministros y lo básico para vivir por tu cuenta.</p>
+            </div>
+          </a>
+
+          <a href="#articulos" class="topic-box" data-topic="burocracia">
+            <div class="topic-icon">📄</div>
+            <div class="topic-content">
+              <h3>Burocracia y trámites</h3>
+              <p>Documentos, gestiones, citas, impuestos y procesos que conviene entender.</p>
+            </div>
+          </a>
+
+          <a href="#articulos" class="topic-box" data-topic="vida-adulta">
+            <div class="topic-icon">🧭</div>
+            <div class="topic-content">
+              <h3>Vida adulta</h3>
+              <p>Organización, responsabilidades, decisiones y hábitos para empezar mejor esta etapa.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUSCADOR + ARTÍCULOS -->
+    <section class="articles-section" id="articulos">
+      <div class="container">
+        <div class="articles-top">
+          <div class="articles-intro-card">
+            <p class="section-kicker">ARTÍCULOS</p>
+            <h2>Busca por nombre o filtra por tema</h2>
+            <p>
+              Puedes escribir el nombre del artículo o pulsar uno de los temas de arriba
+              para ver solo los contenidos relacionados.
+            </p>
+          </div>
+
+          <div class="search-card">
+            <label for="articleSearch" class="search-label">Buscar artículo</label>
+            <input
+              type="text"
+              id="articleSearch"
+              placeholder="Ej. salario bruto, alquiler, presupuesto..."
+            />
+            <button type="button" id="clearSearch" class="clear-btn">Limpiar</button>
+          </div>
+        </div>
+
+        <div class="filter-tags" id="filterTags">
+          <button class="filter-tag active" data-filter="all">Todos</button>
+          <button class="filter-tag" data-filter="finanzas-personales">Finanzas personales</button>
+          <button class="filter-tag" data-filter="trabajo">Trabajo</button>
+          <button class="filter-tag" data-filter="vivienda">Vivienda</button>
+          <button class="filter-tag" data-filter="burocracia">Burocracia y trámites</button>
+          <button class="filter-tag" data-filter="vida-adulta">Vida adulta</button>
+        </div>
+
+        <div class="articles-grid" id="articlesGrid">
+          <a class="article-card" href="articulos/salario-bruto-vs-neto.html" data-category="trabajo" data-title="Salario bruto vs neto: cuánto ganas realmente">
+            <span class="article-tag">Trabajo</span>
+            <h3>Salario bruto vs neto: cuánto ganas realmente</h3>
+            <p>Entiende la diferencia entre lo que firmas y lo que realmente llega a tu cuenta.</p>
+          </a>
+
+          <a class="article-card" href="articulos/como-hacer-un-presupuesto.html" data-category="finanzas-personales" data-title="Cómo hacer un presupuesto mensual sin agobiarte">
+            <span class="article-tag">Finanzas personales</span>
+            <h3>Cómo hacer un presupuesto mensual sin agobiarte</h3>
+            <p>Una forma simple de organizar ingresos, gastos fijos y margen real de ahorro.</p>
+          </a>
+
+          <a class="article-card" href="articulos/cuanto-cuesta-emanciparse.html" data-category="vivienda" data-title="Cuánto cuesta emanciparse de verdad">
+            <span class="article-tag">Vivienda</span>
+            <h3>Cuánto cuesta emanciparse de verdad</h3>
+            <p>Los gastos que normalmente no se tienen en cuenta antes de irse a vivir solo.</p>
+          </a>
+
+          <a class="article-card" href="articulos/que-es-la-fianza.html" data-category="vivienda" data-title="Qué es la fianza y qué puede pasar con ella">
+            <span class="article-tag">Vivienda</span>
+            <h3>Qué es la fianza y qué puede pasar con ella</h3>
+            <p>Qué cubre, cuándo se devuelve y qué revisar antes de firmar un alquiler.</p>
+          </a>
+
+          <a class="article-card" href="articulos/primer-contrato-de-trabajo.html" data-category="trabajo" data-title="Qué revisar antes de firmar tu primer contrato">
+            <span class="article-tag">Trabajo</span>
+            <h3>Qué revisar antes de firmar tu primer contrato</h3>
+            <p>Las cláusulas y datos básicos que conviene mirar antes de aceptar un trabajo.</p>
+          </a>
+
+          <a class="article-card" href="articulos/fondo-emergencia.html" data-category="finanzas-personales" data-title="Qué es un fondo de emergencia y por qué deberías tener uno">
+            <span class="article-tag">Finanzas personales</span>
+            <h3>Qué es un fondo de emergencia y por qué deberías tener uno</h3>
+            <p>La base financiera que te ayuda a no depender de imprevistos o deudas rápidas.</p>
+          </a>
+
+          <a class="article-card" href="articulos/documentos-importantes.html" data-category="burocracia" data-title="Qué documentos importantes deberías tener controlados">
+            <span class="article-tag">Burocracia y trámites</span>
+            <h3>Qué documentos importantes deberías tener controlados</h3>
+            <p>Un repaso práctico a papeles, certificados y gestiones que conviene tener ubicados.</p>
+          </a>
+
+          <a class="article-card" href="articulos/empadronamiento.html" data-category="burocracia" data-title="Qué es el empadronamiento y para qué sirve">
+            <span class="article-tag">Burocracia y trámites</span>
+            <h3>Qué es el empadronamiento y para qué sirve</h3>
+            <p>Uno de los trámites más básicos y a la vez más importantes al cambiar de vivienda.</p>
+          </a>
+
+          <a class="article-card" href="articulos/organizar-gastos-fijos.html" data-category="vida-adulta" data-title="Cómo organizar tus gastos fijos sin perder el control">
+            <span class="article-tag">Vida adulta</span>
+            <h3>Cómo organizar tus gastos fijos sin perder el control</h3>
+            <p>Aprende a distinguir gastos estables, variables y evitables para ir con más calma.</p>
+          </a>
+
+          <a class="article-card" href="articulos/errores-primer-alquiler.html" data-category="vivienda" data-title="Errores frecuentes en tu primer alquiler">
+            <span class="article-tag">Vivienda</span>
+            <h3>Errores frecuentes en tu primer alquiler</h3>
+            <p>Los fallos más comunes al alquilar por primera vez y cómo evitarlos.</p>
+          </a>
+
+          <a class="article-card" href="articulos/como-leer-una-nomina.html" data-category="trabajo" data-title="Cómo leer una nómina sin volverte loco">
+            <span class="article-tag">Trabajo</span>
+            <h3>Cómo leer una nómina sin volverte loco</h3>
+            <p>Conceptos clave para entender qué te pagan, qué te descuentan y por qué.</p>
+          </a>
+
+          <a class="article-card" href="articulos/primeros-pasos-ahorrar.html" data-category="finanzas-personales" data-title="Primeros pasos para ahorrar de verdad">
+            <span class="article-tag">Finanzas personales</span>
+            <h3>Primeros pasos para ahorrar de verdad</h3>
+            <p>Pequeños cambios y un sistema sencillo para empezar a guardar dinero con constancia.</p>
+          </a>
+        </div>
+
+        <p class="no-results" id="noResults">No se han encontrado artículos con esa búsqueda.</p>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about-section" id="sobre">
+      <div class="container about-box">
+        <p class="section-kicker">SOBRE LA WEB</p>
+        <h2>Una guía útil para empezar la vida adulta con menos caos</h2>
+        <p>
+          Nadie te lo explica nace para reunir de forma clara y práctica aquello
+          que casi siempre se aprende tarde: gestionar tu dinero, entender una nómina,
+          alquilar con criterio o no perderte entre trámites.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Nadie te lo explica</p>
+      <p>Guías claras para la vida adulta.</p>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("articleSearch");
+    const clearBtn = document.getElementById("clearSearch");
+    const articleCards = document.querySelectorAll(".article-card");
+    const filterButtons = document.querySelectorAll(".filter-tag");
+    const topicBoxes = document.querySelectorAll(".topic-box");
+    const noResults = document.getElementById("noResults");
+
+    let activeFilter = "all";
+
+    function filterArticles() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      articleCards.forEach((card) => {
+        const title = card.dataset.title.toLowerCase();
+        const category = card.dataset.category;
+
+        const matchesSearch = title.includes(searchTerm);
+        const matchesFilter = activeFilter === "all" || category === activeFilter;
+
+        if (matchesSearch && matchesFilter) {
+          card.style.display = "flex";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      noResults.style.display = visibleCount === 0 ? "block" : "none";
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+        activeFilter = button.dataset.filter;
+        filterArticles();
+      });
+    });
+
+    topicBoxes.forEach((box) => {
+      box.addEventListener("click", () => {
+        const topic = box.dataset.topic;
+        activeFilter = topic;
+
+        filterButtons.forEach((btn) => {
+          btn.classList.remove("active");
+          if (btn.dataset.filter === topic) {
+            btn.classList.add("active");
+          }
+        });
+
+        filterArticles();
+      });
+    });
+
+    searchInput.addEventListener("input", filterArticles);
+
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      activeFilter = "all";
+
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      document.querySelector('.filter-tag[data-filter="all"]').classList.add("active");
+
+      filterArticles();
+    });
+  </script>
+</body>
+</html>
