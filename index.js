@@ -4,6 +4,7 @@ const articleCards = document.querySelectorAll(".article-card");
 const filterButtons = document.querySelectorAll(".filter-tag");
 const topicButtons = document.querySelectorAll(".topic-box");
 const noResults = document.getElementById("noResults");
+const articlesSection = document.getElementById("articulos");
 
 let activeFilter = "all";
 
@@ -20,7 +21,7 @@ function updateVisibleArticles() {
 
     if (matchesSearch && matchesFilter) {
       card.style.display = "flex";
-      visibleCount++;
+      visibleCount += 1;
     } else {
       card.style.display = "none";
     }
@@ -49,18 +50,26 @@ topicButtons.forEach((button) => {
     setActiveFilterButton(activeFilter);
     updateVisibleArticles();
 
-    const articlesSection = document.getElementById("articulos");
-    articlesSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (articlesSection) {
+      articlesSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   });
 });
 
-searchInput.addEventListener("input", updateVisibleArticles);
+if (searchInput) {
+  searchInput.addEventListener("input", updateVisibleArticles);
+}
 
-clearBtn.addEventListener("click", () => {
-  searchInput.value = "";
-  activeFilter = "all";
-  setActiveFilterButton("all");
-  updateVisibleArticles();
-});
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    activeFilter = "all";
+    setActiveFilterButton("all");
+    updateVisibleArticles();
+  });
+}
 
 updateVisibleArticles();
