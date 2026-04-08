@@ -128,8 +128,7 @@ img {
   color: var(--white) !important;
 }
 
-/* Si mantienes dos .nav en el HTML, ocultamos la segunda en desktop
-   para que no se vea duplicada */
+/* ocultar segundo nav duplicado en desktop */
 .site-header__inner > .nav:last-of-type {
   display: none;
 }
@@ -160,6 +159,27 @@ img {
   top: 118px;
   display: grid;
   gap: 18px;
+  max-height: calc(100vh - 138px);
+  overflow-y: auto;
+  padding-right: 6px;
+  overscroll-behavior: contain;
+}
+
+.article-sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.article-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.article-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(16, 17, 20, 0.14);
+  border-radius: 999px;
+}
+
+.article-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 17, 20, 0.24);
 }
 
 .sidebar-card {
@@ -535,6 +555,9 @@ img {
   .article-sidebar {
     position: static;
     order: 2;
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
   }
 
   .article-main {
@@ -590,10 +613,6 @@ img {
     padding: 0 18px 18px;
   }
 }
-
-/* =========================
-   OPCIONAL: si quieres mostrar solo un menú en móvil
-========================= */
 
 @media (max-width: 640px) {
   .site-header__inner {
