@@ -54,7 +54,6 @@
                 <a href="#temas-destacados" class="btn btn-primary">Explorar temas</a>
                 <a href="articulos.html" class="btn btn-secondary">Ver artículos destacados</a>
               </div>
-
             </div>
 
             <aside class="hero-card">
@@ -91,53 +90,53 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">TEMAS PRINCIPALES</p>
-          <h2 class="section-title">Empieza por el tema que más te preocupa.</h2>
+          <h2 class="section-title section-title-wide">Empieza por el tema que más te preocupa.</h2>
           <p class="section-text">
             Cada bloque agrupa artículos relacionados para que sea fácil navegar
             por la web y entender rápidamente de qué va cada contenido.
           </p>
         </div>
 
-          <div class="topics-grid" >
-          <article class="topic-box" href="articulos.html?tema=finanzas-personales">
+        <div class="topics-grid">
+          <a class="topic-box" href="articulos.html?tema=finanzas">
             <div class="topic-icon">💸</div>
             <div class="topic-content">
               <h3>Finanzas personales</h3>
               <p>Presupuesto, ahorro, gastos, control del dinero y hábitos básicos para organizarte mejor.</p>
             </div>
-          </article> 
+          </a>
 
-          <article class="topic-box">
+          <a class="topic-box" href="articulos.html?tema=inversiones">
             <div class="topic-icon">📈</div>
             <div class="topic-content">
               <h3>Inversiones</h3>
               <p>Primeros pasos para invertir con criterio, entender riesgos y evitar humo financiero.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="topic-box">
+          <a class="topic-box" href="articulos.html?tema=vivienda">
             <div class="topic-icon">🏠</div>
             <div class="topic-content">
               <h3>Vivienda y hogar</h3>
               <p>Alquiler, facturas, suministros, mudanzas, contratos y todo lo que implica vivir por tu cuenta.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="topic-box">
+          <a class="topic-box" href="articulos.html?tema=trabajo">
             <div class="topic-icon">💼</div>
             <div class="topic-content">
               <h3>Trabajo y salario</h3>
               <p>Nóminas, contratos, sueldo neto, derechos laborales y claves para entender tu vida profesional.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="topic-box">
+          <a class="topic-box" href="articulos.html?tema=impuestos">
             <div class="topic-icon">🧾</div>
             <div class="topic-content">
               <h3>Impuestos y burocracia</h3>
               <p>Renta, Hacienda, empadronamiento, trámites útiles y papeleo explicado con claridad.</p>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -147,7 +146,7 @@
         <div class="contact-shell">
           <div class="contact-copy">
             <p class="eyebrow">CONTACTO</p>
-            <h2 class="section-title">¿Hay un tema que quieres que expliquemos?</h2>
+            <h2 class="section-title section-title-contact">¿Hay un tema que quieres que expliquemos?</h2>
             <p class="section-text">
               Escríbenos si hay una duda de vida adulta que te gustaría ver en la web:
               nómina, alquiler, impuestos, ahorrar, invertir o cualquier trámite que
@@ -159,7 +158,7 @@
                 <span class="contact-point-icon">💡</span>
                 <div>
                   <h3>Propón un tema</h3>
-                  <p>Dinos qué artículo te gustaría leer.</p>
+                  <p>Dinos qué artículo te gustaría leer o qué problema te gustaría entender mejor.</p>
                 </div>
               </article>
 
@@ -167,7 +166,7 @@
                 <span class="contact-point-icon">🛠️</span>
                 <div>
                   <h3>Corrige una guía</h3>
-                  <p>Si ves algo confuso o mejorable, nos lo puedes señalar.</p>
+                  <p>Si ves algo confuso, desactualizado o mejorable, lo revisamos.</p>
                 </div>
               </article>
 
@@ -175,54 +174,61 @@
                 <span class="contact-point-icon">🤝</span>
                 <div>
                   <h3>Colaboraciones</h3>
-                  <p>También puedes escribirnos para propuestas o ideas.</p>
+                  <p>También puedes escribirnos para propuestas, ideas o posibles colaboraciones.</p>
                 </div>
               </article>
             </div>
           </div>
 
           <div class="contact-form-card">
-            <h3>Escríbenos</h3>
-            <p class="contact-form-intro">
-              Responderemos cuando podamos. Cuanto más claro sea el mensaje, mejor.
-            </p>
+            <div class="contact-form-head">
+              <p class="contact-form-kicker">ESCRÍBENOS</p>
+              <h3>Cuéntanos qué necesitas</h3>
+              <p class="contact-form-intro">
+                Cuanto más claro sea el mensaje, más fácil será preparar contenido útil.
+              </p>
+            </div>
 
             <form
               class="contact-form"
               action="https://formspree.io/f/mbdpwvrn"
               method="POST"
             >
-              <div class="form-row">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-row">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
               </div>
 
-              <div class="form-row">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-              </div>
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="motivo">Motivo</label>
+                  <select id="motivo" name="motivo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="proponer-tema">Proponer un tema</option>
+                    <option value="corregir-articulo">Corregir un artículo</option>
+                    <option value="colaboracion">Colaboración</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
 
-              <div class="form-row">
-                <label for="motivo">Motivo</label>
-                <select id="motivo" name="motivo" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="proponer-tema">Proponer un tema</option>
-                  <option value="corregir-articulo">Corregir un artículo</option>
-                  <option value="colaboracion">Colaboración</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
-
-              <div class="form-row">
-                <label for="tema">Tema relacionado</label>
-                <select id="tema" name="tema">
-                  <option value="">Selecciona un tema</option>
-                  <option value="finanzas-personales">💸 Finanzas personales</option>
-                  <option value="inversiones">📈 Inversiones</option>
-                  <option value="vivienda-y-hogar">🏠 Vivienda y hogar</option>
-                  <option value="trabajo-y-salario">💼 Trabajo y salario</option>
-                  <option value="impuestos-y-burocracia">🧾 Impuestos y burocracia</option>
-                </select>
+                <div class="form-row">
+                  <label for="tema">Tema relacionado</label>
+                  <select id="tema" name="tema">
+                    <option value="">Selecciona un tema</option>
+                    <option value="finanzas-personales">💸 Finanzas personales</option>
+                    <option value="inversiones">📈 Inversiones</option>
+                    <option value="vivienda-y-hogar">🏠 Vivienda y hogar</option>
+                    <option value="trabajo-y-salario">💼 Trabajo y salario</option>
+                    <option value="impuestos-y-burocracia">🧾 Impuestos y burocracia</option>
+                  </select>
+                </div>
               </div>
 
               <div class="form-row">
@@ -238,7 +244,7 @@
 
               <input type="hidden" name="_subject" value="Nuevo mensaje desde nadie te lo explica">
 
-              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+              <button type="submit" class="btn btn-primary contact-submit">Enviar mensaje</button>
             </form>
           </div>
         </div>
