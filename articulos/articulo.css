@@ -607,4 +607,10 @@ img {
   .faq-answer {
     padding: 0 18px 18px;
   }
+
+  html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }
+}
+
