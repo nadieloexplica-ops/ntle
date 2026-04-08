@@ -3,245 +3,230 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cómo leer una nómina en España | Nadie te lo explica</title>
-  <link rel="stylesheet" href="articulo.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
+  <title>Cómo leer una nómina en España sin perderte | Nadie te lo explica</title>
+  <meta
+    name="description"
+    content="Guía clara para entender una nómina en España: salario bruto, neto, deducciones, IRPF y qué revisar cada mes."
   />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/article.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="logo" href="../index.html">
-        nadie <span class="mark">te lo explica</span>
-      </a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">nadie te lo explica</a>
 
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="../index.html#temas-destacados">Temas</a>
-        <a href="../articulos.html" class="active">Artículos</a>
-        <a href="../index.html#contacto" class="btn btn-primary nav-btn">Contáctanos</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Principal">
+        <a href="../index.html#temas">Temas</a>
+        <a href="../articulos.html" class="is-active">Artículos</a>
+        <a href="../index.html#sobre">Sobre la web</a>
+        <a href="../index.html#contacto" class="nav-cta">Contáctanos</a>
       </nav>
     </div>
   </header>
 
-  <main class="article-page">
-    <div class="container">
-      <div class="article-grid-layout">
-        <aside class="article-sidebar">
+  <main class="section article-page">
+    <div class="container article-layout">
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <p class="sidebar-title">PALABRAS CLAVE</p>
+          <ul class="keyword-list">
+            <li>nómina</li>
+            <li>salario bruto</li>
+            <li>salario neto</li>
+            <li>IRPF</li>
+            <li>deducciones</li>
+          </ul>
+        </div>
 
-          <div class="sidebar-card">
-            <p class="sidebar-kicker">PALABRAS CLAVE</p>
-            <div class="sidebar-tags">
-              <span class="keyword-tag">nómina</span>
-              <span class="keyword-tag">salario</span>
-              <span class="keyword-tag">bruto</span>
-              <span class="keyword-tag">neto</span>
-              <span class="keyword-tag">IRPF</span>
-            </div>
+        <div class="sidebar-card">
+          <p class="sidebar-title">NAVEGACIÓN</p>
+          <nav class="article-anchor-nav">
+            <a href="#que-es-una-nomina">Qué es una nómina</a>
+            <a href="#bruto-y-neto">Bruto y neto</a>
+            <a href="#deducciones">Deducciones</a>
+            <a href="#que-revisar">Qué revisar cada mes</a>
+            <a href="#errores">Errores frecuentes</a>
+            <a href="#cierre">Cierre</a>
+            <a href="#faq">Preguntas frecuentes</a>
+          </nav>
+        </div>
+
+        <div class="sidebar-card">
+          <p class="sidebar-title">RECURSO</p>
+          <p>Descarga un ejemplo de nómina para seguir el artículo con un caso real.</p>
+          <a href="../docs/ejemplo-nomina.pdf" class="btn btn-secondary" download>
+            Descargar documento
+          </a>
+        </div>
+      </aside>
+
+      <article class="article-content">
+        <div class="article-top">
+          <p class="eyebrow">ARTÍCULO · Trabajo y salario</p>
+          <h1><span>Cómo leer una nómina</span> en España sin perderte</h1>
+          <p class="article-intro">
+            Entender una nómina puede parecer complicado al principio, pero si sabes qué mirar
+            y qué significa cada concepto, es mucho más fácil comprobar cuánto cobras realmente
+            y por qué.
+          </p>
+        </div>
+
+        <section id="que-es-una-nomina" class="article-section">
+          <p class="section-kicker">PUNTO 1</p>
+          <h2>Qué es una nómina y para qué sirve</h2>
+          <p>
+            La nómina es el documento que resume lo que una empresa paga a una persona trabajadora
+            en un periodo determinado. No solo muestra el salario: también incluye deducciones,
+            cotizaciones y otros conceptos que afectan al importe final.
+          </p>
+          <p>
+            En otras palabras, no sirve solo para “ver cuánto has cobrado”, sino para entender
+            de dónde sale esa cifra y detectar posibles errores.
+          </p>
+        </section>
+
+        <section id="bruto-y-neto" class="article-section">
+          <p class="section-kicker">PUNTO 2</p>
+          <h2>Diferencia entre salario bruto y salario neto</h2>
+          <p>
+            El salario bruto es la cantidad total antes de aplicar descuentos. Es la cifra
+            que suele aparecer en ofertas, contratos o conversaciones salariales.
+          </p>
+          <p>
+            El salario neto es el dinero que finalmente llega a tu cuenta. Entre una cifra
+            y otra se restan impuestos, cotizaciones y otras deducciones.
+          </p>
+          <div class="highlight-box">
+            <strong>Idea clave:</strong> tu vida real se organiza con el salario neto, no con el bruto.
           </div>
+        </section>
 
-          <div class="sidebar-card">
-            <p class="sidebar-kicker">NAVEGACIÓN</p>
-            <nav class="sidebar-nav" aria-label="Navegación del artículo">
-              <a href="#punto-1">Qué es una nómina</a>
-              <a href="#punto-2">Bruto y neto</a>
-              <a href="#punto-3">Deducciones</a>
-              <a href="#punto-4">Qué revisar cada mes</a>
-              <a href="#punto-5">Errores frecuentes</a>
-              <a href="#conclusion">Cierre · Conclusión</a>
-              <a href="#faq">Preguntas frecuentes</a>
-            </nav>
-          </div>
+        <section id="deducciones" class="article-section">
+          <p class="section-kicker">PUNTO 3</p>
+          <h2>Qué son las deducciones</h2>
+          <p>
+            Las deducciones son cantidades que se restan del salario bruto. Entre las más habituales
+            están las cotizaciones a la Seguridad Social y la retención del IRPF.
+          </p>
+          <p>
+            Aunque al principio parezcan solo “descuentos”, conviene entenderlas porque explican
+            gran parte de la diferencia entre lo que pactas y lo que recibes.
+          </p>
+        </section>
 
-          <div class="sidebar-card download-card">
-            <p class="sidebar-kicker">RECURSO</p>
-            <p class="sidebar-text">
-              Descarga un ejemplo de nómina para seguir el artículo con un caso real.
+        <section id="que-revisar" class="article-section">
+          <p class="section-kicker">PUNTO 4</p>
+          <h2>Qué debes revisar cada mes</h2>
+          <p>
+            Una revisión rápida puede evitar muchos errores. Lo más importante es comprobar:
+          </p>
+          <ul class="article-list">
+            <li>Datos personales y de la empresa.</li>
+            <li>Salario base y posibles complementos.</li>
+            <li>Pagas extra si aparecen prorrateadas.</li>
+            <li>Deducciones aplicadas.</li>
+            <li>Cambios respecto al mes anterior.</li>
+          </ul>
+        </section>
+
+        <section id="errores" class="article-section">
+          <p class="section-kicker">PUNTO 5</p>
+          <h2>Cómo detectar errores frecuentes</h2>
+          <p>
+            Algunos errores comunes son importes mal calculados, conceptos que faltan, cambios
+            inesperados en la retención o diferencias injustificadas entre nóminas de distintos meses.
+          </p>
+          <p>
+            No hace falta dominar todos los términos técnicos: basta con entender la estructura
+            general y revisar si las cifras encajan con tu situación.
+          </p>
+        </section>
+
+        <section id="cierre" class="article-closing">
+          <p class="section-kicker">CIERRE · CONCLUSIÓN</p>
+          <h2>Qué idea conviene recordar</h2>
+          <p>
+            Entender una nómina no consiste en memorizar cada concepto, sino en saber identificar
+            los bloques principales, revisar si las cifras tienen sentido y detectar cambios
+            importantes de un mes a otro.
+          </p>
+          <p>
+            Con una revisión básica y constante, es mucho más fácil comprender qué estás cobrando
+            realmente y ganar seguridad con tu dinero.
+          </p>
+        </section>
+
+        <section id="faq" class="faq-block">
+          <p class="section-kicker">PREGUNTAS FRECUENTES</p>
+          <h2>Respuestas rápidas para dudas habituales</h2>
+
+          <details class="faq-item">
+            <summary>¿Qué diferencia hay entre bruto y neto?</summary>
+            <p>
+              El bruto es la cantidad total antes de descuentos. El neto es la cantidad final
+              que recibes después de aplicar las deducciones correspondientes.
             </p>
-            <a class="download-btn" href="../documentos/nomina-ejemplo.pdf" download>
-              Descargar documento
-            </a>
-          </div>
-        </aside>
+          </details>
 
-        <article class="article-main">
-          <header class="article-hero">
-            <div class="article-meta-top">
-              <span class="article-label">ARTÍCULO</span>
-              <span class="article-category-pill">Trabajo y salario</span>
-            </div>
-
-            <h1 class="article-title">
-              Cómo leer una <span class="title-accent">nómina</span> en España sin perderte
-            </h1>
-
-            <div class="article-keywords">
-              <span class="keyword-tag">nómina</span>
-              <span class="keyword-tag">salario</span>
-              <span class="keyword-tag">sueldo neto</span>
-              <span class="keyword-tag">sueldo bruto</span>
-              <span class="keyword-tag">IRPF</span>
-            </div>
-
-            <p class="article-intro">
-              Entender una nómina puede parecer complicado al principio, pero si
-              sabes qué mirar y qué significa cada concepto, es mucho más fácil
-              comprobar cuánto cobras realmente y por qué.
+          <details class="faq-item">
+            <summary>¿Por qué mi nómina puede cambiar cada mes?</summary>
+            <p>
+              Puede cambiar por complementos variables, pagas extra, vacaciones, bajas médicas,
+              horas extra o cambios en la retención del IRPF.
             </p>
-          </header>
+          </details>
 
-          <section class="article-content">
-            <section class="content-block" id="punto-1">
-              <p class="content-kicker">PUNTO 1</p>
-              <h2>Qué es una nómina y para qué sirve</h2>
-              <p>
-                La nómina es el documento que resume lo que una empresa paga a una
-                persona trabajadora en un periodo determinado. No solo muestra el
-                salario, también incluye información sobre deducciones,
-                cotizaciones y conceptos adicionales.
-              </p>
-            </section>
+          <details class="faq-item">
+            <summary>¿Qué hago si encuentro un error?</summary>
+            <p>
+              Lo mejor es revisar el concepto afectado y consultar con la empresa o con recursos
+              humanos para pedir una corrección o una aclaración.
+            </p>
+          </details>
 
-            <section class="content-block" id="punto-2">
-              <p class="content-kicker">PUNTO 2</p>
-              <h2>Diferencia entre salario bruto y salario neto</h2>
-              <p>
-                El salario bruto es la cantidad total antes de aplicar descuentos.
-                El salario neto es el importe final que recibes después de restar
-                impuestos, cotizaciones y otras deducciones.
-              </p>
-            </section>
+          <details class="faq-item">
+            <summary>¿La retención del IRPF siempre es la misma?</summary>
+            <p>
+              No. Puede variar según el salario, el tipo de contrato y la situación personal
+              o familiar.
+            </p>
+          </details>
 
-            <section class="content-block" id="punto-3">
-              <p class="content-kicker">PUNTO 3</p>
-              <h2>Qué son las deducciones</h2>
-              <p>
-                Las deducciones son cantidades que se restan del salario bruto.
-                Entre las más habituales están las cotizaciones a la Seguridad
-                Social y la retención del IRPF.
-              </p>
-            </section>
-
-            <section class="content-block" id="punto-4">
-              <p class="content-kicker">PUNTO 4</p>
-              <h2>Qué debes revisar cada mes</h2>
-              <p>
-                Es recomendable revisar tus datos personales, el salario base, los
-                complementos, las pagas extra si aparecen prorrateadas y las
-                deducciones aplicadas.
-              </p>
-            </section>
-
-            <section class="content-block" id="punto-5">
-              <p class="content-kicker">PUNTO 5</p>
-              <h2>Cómo detectar errores frecuentes</h2>
-              <p>
-                Algunos errores comunes son importes mal calculados, conceptos que
-                faltan, cambios en la retención o variaciones injustificadas entre
-                nóminas de distintos meses.
-              </p>
-            </section>
-          </section>
-
-          <section class="conclusion-section" id="conclusion" aria-labelledby="conclusion-title">
-            <div class="conclusion-card">
-              <p class="conclusion-kicker">CIERRE · CONCLUSIÓN</p>
-              <h2 id="conclusion-title">Qué idea conviene recordar</h2>
-              <p class="conclusion-text">
-                Entender una nómina no consiste en memorizar todos los conceptos,
-                sino en saber identificar los bloques principales, revisar si las
-                cifras encajan y detectar cambios importantes de un mes a otro.
-                Con una revisión básica y constante, es mucho más fácil comprender
-                qué estás cobrando realmente.
-              </p>
-            </div>
-          </section>
-
-          <section class="faq-section" id="faq" aria-labelledby="faq-title">
-            <div class="faq-heading">
-              <p class="content-kicker">PREGUNTAS FRECUENTES</p>
-              <h2 id="faq-title">Respuestas rápidas para dudas habituales</h2>
-            </div>
-
-            <div class="faq-list">
-              <details class="faq-item">
-                <summary>¿Qué diferencia hay entre bruto y neto?</summary>
-                <div class="faq-answer">
-                  <p>
-                    El bruto es la cantidad total antes de descuentos. El neto es
-                    la cantidad final que recibes después de aplicar las
-                    deducciones correspondientes.
-                  </p>
-                </div>
-              </details>
-
-              <details class="faq-item">
-                <summary>¿Por qué mi nómina puede cambiar cada mes?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Puede cambiar por complementos variables, pagas extra,
-                    vacaciones, bajas médicas, horas extra o cambios en la
-                    retención del IRPF.
-                  </p>
-                </div>
-              </details>
-
-              <details class="faq-item">
-                <summary>¿Qué hago si encuentro un error?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Lo mejor es revisar el concepto afectado y consultar con la
-                    empresa o con recursos humanos para pedir una corrección o una
-                    aclaración.
-                  </p>
-                </div>
-              </details>
-
-              <details class="faq-item">
-                <summary>¿La retención del IRPF siempre es la misma?</summary>
-                <div class="faq-answer">
-                  <p>
-                    No. Puede variar según el salario, el tipo de contrato y la
-                    situación personal o familiar.
-                  </p>
-                </div>
-              </details>
-
-              <details class="faq-item">
-                <summary>¿Debo guardar mis nóminas?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Sí. Es recomendable guardarlas porque pueden ser útiles para
-                    trámites, reclamaciones o comprobaciones futuras.
-                  </p>
-                </div>
-              </details>
-            </div>
-          </section>
-        </article>
-      </div>
+          <details class="faq-item">
+            <summary>¿Debo guardar mis nóminas?</summary>
+            <p>
+              Sí. Es recomendable guardarlas porque pueden ser útiles para trámites,
+              reclamaciones o comprobaciones futuras.
+            </p>
+          </details>
+        </section>
+      </article>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>© 2026 Nadie te lo explica</strong>
+        <p>Guías claras para la vida adulta.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="../index.html">Inicio</a>
+        <a href="../articulos.html">Artículos</a>
+        <a href="../index.html#sobre">Sobre la web</a>
+        <a href="../index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
