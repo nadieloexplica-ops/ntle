@@ -36,6 +36,8 @@ function normalizeText(text) {
 }
 
 function applyFilters() {
+  if (!articleItems.length) return;
+
   const query = normalizeText(searchInput.value.trim());
   let visibleCount = 0;
 
@@ -45,13 +47,9 @@ function applyFilters() {
     const keywords = normalizeText(item.dataset.keywords || "");
 
     const matchesFilter = activeFilter === "todos" || category === activeFilter;
-    const matchesSearch =
-      query === "" ||
-      title.includes(query) ||
-      keywords.includes(query);
+    const matchesSearch = query === "" || title.includes(query) || keywords.includes(query);
 
     const shouldShow = matchesFilter && matchesSearch;
-
     item.hidden = !shouldShow;
 
     if (shouldShow) visibleCount++;
@@ -77,7 +75,7 @@ if (searchInput) {
 if (clearFiltersButton) {
   clearFiltersButton.addEventListener("click", () => {
     activeFilter = "todos";
-    searchInput.value = "";
+    if (searchInput) searchInput.value = "";
     setActiveButton(activeFilter);
     applyFilters();
     history.replaceState({}, "", "articulos.html");
