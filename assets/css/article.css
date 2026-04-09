@@ -8,8 +8,24 @@
 .article-sidebar {
   position: sticky;
   top: calc(var(--header-height) + 16px);
+  height: calc(100vh - var(--header-height) - 32px);
+}
+
+.article-sidebar-scroll {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 0.35rem;
   display: grid;
   gap: 1rem;
+}
+
+.article-sidebar-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.article-sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(17, 19, 25, 0.12);
+  border-radius: 999px;
 }
 
 .sidebar-card {
@@ -32,7 +48,7 @@
 .sidebar-category-badge {
   display: inline-block;
   padding: 0.55rem 0.85rem;
-  background: linear-gradient(135deg, var(--primary-soft), var(--accent-soft));
+  background: linear-gradient(180deg, #fff2f4, #ffe8eb);
   border-radius: 999px;
   font-weight: 800;
 }
@@ -140,15 +156,15 @@
 .highlight-box {
   margin-top: 1rem;
   padding: 1rem 1.1rem;
-  background: linear-gradient(135deg, var(--primary-soft), #fff6f7);
+  background: linear-gradient(180deg, #fff2f4, #fff8f9);
   border: 1px solid rgba(239, 75, 90, 0.14);
   border-radius: 18px;
 }
 
 .article-closing {
   padding: 1.4rem;
-  background: linear-gradient(135deg, #fff4f6, #f8f6ff);
-  border: 1px solid rgba(124, 92, 255, 0.10);
+  background: linear-gradient(180deg, #fff7f8, #ffffff);
+  border: 1px solid rgba(239, 75, 90, 0.12);
   border-radius: 24px;
 }
 
@@ -191,7 +207,6 @@
   margin: 0.9rem 0 0;
 }
 
-/* Solución al problema del menú sticky al navegar por anclas */
 .article-anchor-target {
   scroll-margin-top: 120px;
 }
@@ -203,11 +218,13 @@
 
   .article-sidebar {
     position: static;
-    order: 2;
+    height: auto;
   }
 
-  .article-content {
-    order: 1;
+  .article-sidebar-scroll {
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
   }
 }
 
