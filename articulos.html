@@ -6,14 +6,17 @@
   <title>Artículos | Nadie te lo explica</title>
   <meta
     name="description"
-    content="Busca artículos por nombre o filtra por tema. Guías claras sobre dinero, trabajo, vivienda, burocracia y vida adulta."
+    content="Busca artículos por nombre o filtra por tema. Guías claras sobre finanzas, trabajo, vivienda, impuestos y vida adulta."
   />
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-  <header class="site-header" id="top">
+  <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">nadie te lo explica</a>
+      <a href="index.html" class="brand" aria-label="Ir al inicio">
+        <span class="brand-dot"></span>
+        <span>nadie te lo explica</span>
+      </a>
 
       <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
         <span></span>
@@ -34,21 +37,20 @@
     <div class="container listing-layout">
       <aside class="listing-sidebar">
         <p class="eyebrow">ARTÍCULOS</p>
-        <h1>Todo lo que necesitas entender, ordenado por temas.</h1>
+        <h1>Encuentra el artículo que necesitas sin perder tiempo.</h1>
         <p>
-          Busca por nombre o filtra por categoría. Aquí reunimos guías claras sobre
-          dinero, trabajo, vivienda, trámites y vida adulta.
+          Filtra por tema o busca por nombre. Todo está pensado para que ubicarte sea rápido.
         </p>
 
         <div class="sidebar-block">
-          <h2>Temas</h2>
+          <h2>Categorías</h2>
           <div class="filter-list">
-            <button class="filter-chip is-active" data-filter="todos">Todos</button>
-            <button class="filter-chip" data-filter="finanzas-personales">Finanzas personales</button>
-            <button class="filter-chip" data-filter="trabajo-y-salario">Trabajo y salario</button>
-            <button class="filter-chip" data-filter="vivienda-y-hogar">Vivienda y hogar</button>
-            <button class="filter-chip" data-filter="impuestos-y-burocracia">Impuestos y burocracia</button>
-            <button class="filter-chip" data-filter="vida-adulta">Vida adulta</button>
+            <button class="filter-chip is-active" data-filter="todos">✨ Todos</button>
+            <button class="filter-chip" data-filter="finanzas-personales">💸 Finanzas</button>
+            <button class="filter-chip" data-filter="trabajo-y-salario">💼 Trabajo</button>
+            <button class="filter-chip" data-filter="vivienda-y-hogar">🏠 Vivienda</button>
+            <button class="filter-chip" data-filter="impuestos-y-burocracia">🧾 Trámites</button>
+            <button class="filter-chip" data-filter="vida-adulta">🧠 Vida adulta</button>
           </div>
         </div>
       </aside>
@@ -60,14 +62,14 @@
             <input
               id="articleSearch"
               type="search"
-              placeholder="Buscar artículo por nombre..."
+              placeholder="Buscar artículo por nombre o palabra clave..."
               autocomplete="off"
             />
           </div>
 
           <div class="results-meta">
             <strong id="resultsCount">0</strong>
-            <span>artículos encontrados</span>
+            <span>resultados</span>
           </div>
         </div>
 
@@ -85,7 +87,7 @@
             data-title="cómo leer una nómina en españa sin perderte"
             data-keywords="nómina salario neto bruto irpf trabajo sueldo"
           >
-            <span class="article-topic">Trabajo y salario</span>
+            <span class="article-topic">💼 Trabajo y salario</span>
             <h3>Cómo leer una nómina en España sin perderte</h3>
             <p>Los conceptos básicos para entender qué te pagan, qué te descuentan y por qué.</p>
           </a>
@@ -97,9 +99,9 @@
             data-title="salario bruto vs neto cuánto ganas realmente"
             data-keywords="salario bruto neto sueldo trabajo nómina"
           >
-            <span class="article-topic">Trabajo y salario</span>
+            <span class="article-topic">💼 Trabajo y salario</span>
             <h3>Salario bruto vs neto: cuánto ganas realmente</h3>
-            <p>La diferencia entre lo que acuerdas con la empresa y lo que realmente recibes.</p>
+            <p>La diferencia entre lo que acuerdas y lo que realmente llega a tu cuenta.</p>
           </a>
 
           <a
@@ -109,7 +111,7 @@
             data-title="qué revisar antes de firmar tu primer contrato"
             data-keywords="contrato trabajo condiciones empresa salario"
           >
-            <span class="article-topic">Trabajo y salario</span>
+            <span class="article-topic">💼 Trabajo y salario</span>
             <h3>Qué revisar antes de firmar tu primer contrato</h3>
             <p>Lo que conviene mirar antes de aceptar condiciones que luego pesan más de lo que parece.</p>
           </a>
@@ -121,7 +123,7 @@
             data-title="cómo hacer un presupuesto mensual sin agobiarte"
             data-keywords="presupuesto ahorro gastos dinero organización"
           >
-            <span class="article-topic">Finanzas personales</span>
+            <span class="article-topic">💸 Finanzas personales</span>
             <h3>Cómo hacer un presupuesto mensual sin agobiarte</h3>
             <p>Una forma simple de organizar ingresos, gastos y margen real de ahorro.</p>
           </a>
@@ -133,7 +135,7 @@
             data-title="primeros pasos para ahorrar de verdad"
             data-keywords="ahorro dinero hábitos finanzas"
           >
-            <span class="article-topic">Finanzas personales</span>
+            <span class="article-topic">💸 Finanzas personales</span>
             <h3>Primeros pasos para ahorrar de verdad</h3>
             <p>Cómo empezar a guardar dinero con lógica y sin depender solo de la motivación.</p>
           </a>
@@ -145,7 +147,7 @@
             data-title="qué es un fondo de emergencia y por qué deberías tener uno"
             data-keywords="fondo de emergencia ahorro imprevistos dinero"
           >
-            <span class="article-topic">Finanzas personales</span>
+            <span class="article-topic">💸 Finanzas personales</span>
             <h3>Qué es un fondo de emergencia y por qué deberías tener uno</h3>
             <p>La base que te ayuda a cubrir imprevistos sin recurrir a deuda rápida.</p>
           </a>
@@ -157,7 +159,7 @@
             data-title="cuánto cuesta emanciparse de verdad"
             data-keywords="emanciparse alquiler gastos hogar vivienda"
           >
-            <span class="article-topic">Vivienda y hogar</span>
+            <span class="article-topic">🏠 Vivienda y hogar</span>
             <h3>Cuánto cuesta emanciparse de verdad</h3>
             <p>Los gastos que normalmente no se tienen en cuenta antes de irse a vivir solo.</p>
           </a>
@@ -169,7 +171,7 @@
             data-title="qué es la fianza y qué puede pasar con ella"
             data-keywords="fianza alquiler contrato vivienda"
           >
-            <span class="article-topic">Vivienda y hogar</span>
+            <span class="article-topic">🏠 Vivienda y hogar</span>
             <h3>Qué es la fianza y qué puede pasar con ella</h3>
             <p>Qué cubre, cuándo se devuelve y qué revisar antes de firmar un alquiler.</p>
           </a>
@@ -181,7 +183,7 @@
             data-title="errores frecuentes en tu primer alquiler"
             data-keywords="alquiler errores vivienda contrato primer piso"
           >
-            <span class="article-topic">Vivienda y hogar</span>
+            <span class="article-topic">🏠 Vivienda y hogar</span>
             <h3>Errores frecuentes en tu primer alquiler</h3>
             <p>Los fallos más comunes al alquilar por primera vez y cómo evitarlos.</p>
           </a>
@@ -193,7 +195,7 @@
             data-title="qué documentos importantes deberías tener controlados"
             data-keywords="documentos papeles trámites organización"
           >
-            <span class="article-topic">Impuestos y burocracia</span>
+            <span class="article-topic">🧾 Impuestos y burocracia</span>
             <h3>Qué documentos importantes deberías tener controlados</h3>
             <p>Un repaso práctico a los papeles que conviene tener localizados y ordenados.</p>
           </a>
@@ -205,7 +207,7 @@
             data-title="qué es el empadronamiento y para qué sirve"
             data-keywords="empadronamiento padrón trámites vivienda"
           >
-            <span class="article-topic">Impuestos y burocracia</span>
+            <span class="article-topic">🧾 Impuestos y burocracia</span>
             <h3>Qué es el empadronamiento y para qué sirve</h3>
             <p>Uno de los trámites más básicos y a la vez más importantes al cambiar de vivienda.</p>
           </a>
@@ -217,7 +219,7 @@
             data-title="declaración de la renta primeros pasos para entenderla"
             data-keywords="renta hacienda irpf declaración impuestos"
           >
-            <span class="article-topic">Impuestos y burocracia</span>
+            <span class="article-topic">🧾 Impuestos y burocracia</span>
             <h3>Declaración de la renta: primeros pasos para entenderla</h3>
             <p>Qué es, cuándo aparece y por qué conviene saber lo básico aunque aún te suene lejano.</p>
           </a>
@@ -229,7 +231,7 @@
             data-title="cómo organizar tus gastos fijos sin perder el control"
             data-keywords="gastos fijos organización dinero vida adulta"
           >
-            <span class="article-topic">Vida adulta</span>
+            <span class="article-topic">🧠 Vida adulta</span>
             <h3>Cómo organizar tus gastos fijos sin perder el control</h3>
             <p>Una forma útil de distinguir entre gastos estables, variables y evitables.</p>
           </a>
@@ -241,7 +243,7 @@
             data-title="cómo organizar tus documentos y no perderte entre papeles"
             data-keywords="documentos organización papeles trámites"
           >
-            <span class="article-topic">Vida adulta</span>
+            <span class="article-topic">🧠 Vida adulta</span>
             <h3>Cómo organizar tus documentos y no perderte entre papeles</h3>
             <p>Un sistema simple para no improvisar cada vez que te piden algo importante.</p>
           </a>
@@ -253,7 +255,7 @@
             data-title="qué gastos tendrás cuando empieces a vivir solo"
             data-keywords="vivir solo gastos hogar dinero vida adulta"
           >
-            <span class="article-topic">Vida adulta</span>
+            <span class="article-topic">🧠 Vida adulta</span>
             <h3>Qué gastos tendrás cuando empieces a vivir solo</h3>
             <p>Una visión realista de los costes que aparecen cuando dejas casa de tus padres.</p>
           </a>
@@ -261,7 +263,7 @@
 
         <div class="empty-state" id="emptyState" hidden>
           <h2>No hemos encontrado artículos</h2>
-          <p>Prueba con otra búsqueda o cambia el filtro.</p>
+          <p>Prueba con otra búsqueda o cambia la categoría.</p>
         </div>
       </section>
     </div>
@@ -271,7 +273,7 @@
     <div class="container footer-inner">
       <div>
         <strong>© 2026 Nadie te lo explica</strong>
-        <p>Guías claras para la vida adulta.</p>
+        <p>Guías claras para empezar mejor la vida adulta.</p>
       </div>
 
       <nav class="footer-nav" aria-label="Footer">
